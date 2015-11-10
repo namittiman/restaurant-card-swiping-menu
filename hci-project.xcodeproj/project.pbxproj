@@ -14,9 +14,10 @@
 		7DD620291BF17368000D39DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DD620271BF17368000D39DE /* LaunchScreen.storyboard */; };
 		7DD620341BF17368000D39DE /* hci_projectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD620331BF17368000D39DE /* hci_projectTests.m */; };
 		7DD6203F1BF17368000D39DE /* hci_projectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6203E1BF17368000D39DE /* hci_projectUITests.m */; };
-		7DD6204E1BF175AB000D39DE /* RestaurantsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6204D1BF175AB000D39DE /* RestaurantsCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		7DD620541BF17A52000D39DE /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD620531BF17A52000D39DE /* Restaurant.m */; settings = {ASSET_TAGS = (); }; };
 		7DD6205A1BF17E90000D39DE /* RestaurantCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD620591BF17E90000D39DE /* RestaurantCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		7DD6205D1BF1A8CD000D39DE /* SwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6205C1BF1A8CD000D39DE /* SwipeViewController.m */; settings = {ASSET_TAGS = (); }; };
+		7DD620631BF1BE56000D39DE /* RestaurantsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD620621BF1BE56000D39DE /* RestaurantsViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,12 +52,14 @@
 		7DD6203A1BF17368000D39DE /* hci-projectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "hci-projectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DD6203E1BF17368000D39DE /* hci_projectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hci_projectUITests.m; sourceTree = "<group>"; };
 		7DD620401BF17368000D39DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7DD6204C1BF175AB000D39DE /* RestaurantsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantsCollectionViewController.h; sourceTree = "<group>"; };
-		7DD6204D1BF175AB000D39DE /* RestaurantsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantsCollectionViewController.m; sourceTree = "<group>"; };
 		7DD620521BF17A52000D39DE /* Restaurant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Restaurant.h; sourceTree = "<group>"; };
 		7DD620531BF17A52000D39DE /* Restaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Restaurant.m; sourceTree = "<group>"; };
 		7DD620581BF17E90000D39DE /* RestaurantCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantCollectionViewCell.h; sourceTree = "<group>"; };
 		7DD620591BF17E90000D39DE /* RestaurantCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantCollectionViewCell.m; sourceTree = "<group>"; };
+		7DD6205B1BF1A8CD000D39DE /* SwipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeViewController.h; sourceTree = "<group>"; };
+		7DD6205C1BF1A8CD000D39DE /* SwipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeViewController.m; sourceTree = "<group>"; };
+		7DD620611BF1BE56000D39DE /* RestaurantsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantsViewController.h; sourceTree = "<group>"; };
+		7DD620621BF1BE56000D39DE /* RestaurantsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,17 +112,19 @@
 			children = (
 				7DD6201C1BF17368000D39DE /* AppDelegate.h */,
 				7DD6201D1BF17368000D39DE /* AppDelegate.m */,
-				7DD620221BF17368000D39DE /* Main.storyboard */,
-				7DD620251BF17368000D39DE /* Assets.xcassets */,
-				7DD620271BF17368000D39DE /* LaunchScreen.storyboard */,
-				7DD6202A1BF17368000D39DE /* Info.plist */,
-				7DD620191BF17368000D39DE /* Supporting Files */,
-				7DD6204C1BF175AB000D39DE /* RestaurantsCollectionViewController.h */,
-				7DD6204D1BF175AB000D39DE /* RestaurantsCollectionViewController.m */,
-				7DD620521BF17A52000D39DE /* Restaurant.h */,
-				7DD620531BF17A52000D39DE /* Restaurant.m */,
+				7DD620611BF1BE56000D39DE /* RestaurantsViewController.h */,
+				7DD620621BF1BE56000D39DE /* RestaurantsViewController.m */,
 				7DD620581BF17E90000D39DE /* RestaurantCollectionViewCell.h */,
 				7DD620591BF17E90000D39DE /* RestaurantCollectionViewCell.m */,
+				7DD620521BF17A52000D39DE /* Restaurant.h */,
+				7DD620531BF17A52000D39DE /* Restaurant.m */,
+				7DD6205B1BF1A8CD000D39DE /* SwipeViewController.h */,
+				7DD6205C1BF1A8CD000D39DE /* SwipeViewController.m */,
+				7DD620221BF17368000D39DE /* Main.storyboard */,
+				7DD620271BF17368000D39DE /* LaunchScreen.storyboard */,
+				7DD6202A1BF17368000D39DE /* Info.plist */,
+				7DD620251BF17368000D39DE /* Assets.xcassets */,
+				7DD620191BF17368000D39DE /* Supporting Files */,
 			);
 			path = "hci-project";
 			sourceTree = "<group>";
@@ -282,9 +287,10 @@
 			files = (
 				7DD620541BF17A52000D39DE /* Restaurant.m in Sources */,
 				7DD6205A1BF17E90000D39DE /* RestaurantCollectionViewCell.m in Sources */,
+				7DD620631BF1BE56000D39DE /* RestaurantsViewController.m in Sources */,
 				7DD6201E1BF17368000D39DE /* AppDelegate.m in Sources */,
+				7DD6205D1BF1A8CD000D39DE /* SwipeViewController.m in Sources */,
 				7DD6201B1BF17368000D39DE /* main.m in Sources */,
-				7DD6204E1BF175AB000D39DE /* RestaurantsCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +432,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "hci-project/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.namit.hci-project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -437,6 +444,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "hci-project/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.namit.hci-project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -510,6 +518,7 @@
 				7DD620451BF17368000D39DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7DD620461BF17368000D39DE /* Build configuration list for PBXNativeTarget "hci-projectTests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +527,7 @@
 				7DD620481BF17368000D39DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7DD620491BF17368000D39DE /* Build configuration list for PBXNativeTarget "hci-projectUITests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +536,7 @@
 				7DD6204B1BF17368000D39DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

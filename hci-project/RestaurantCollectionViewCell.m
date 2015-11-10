@@ -7,10 +7,6 @@
 //
 
 #import "RestaurantCollectionViewCell.h"
-@interface RestaurantCollectionViewCell ()
-
-@end
 @implementation RestaurantCollectionViewCell
-@synthesize imageView;
 
 @end

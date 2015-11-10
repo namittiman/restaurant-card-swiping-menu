@@ -1,5 +1,5 @@
 //
-//  RestaurantsCollectionViewController.h
+//  SwipeViewController.h
 //  hci-project
 //
 //  Created by Namit Sharma on 11/9/15.
@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Restaurant.h"
-#import "RestaurantCollectionViewCell.h"    
 
-@interface RestaurantsCollectionViewController : UICollectionViewController
+
+@interface SwipeViewController : UIViewController
+@property (nonatomic) Restaurant *r;
 
 @end
