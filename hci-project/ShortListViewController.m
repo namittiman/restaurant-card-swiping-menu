@@ -1,26 +1,22 @@
 //
-//  SwipeViewController.m
+//  ShortListViewController.m
 //  hci-project
 //
-//  Created by Namit Sharma on 11/9/15.
+//  Created by Namit Sharma on 11/10/15.
 //  Copyright © 2015 Namit Sharma. All rights reserved.
 //
 
-#import "SwipeViewController.h"
-@interface SwipeViewController ()
+#import "ShortListViewController.h"
 
-@property (weak, nonatomic) IBOutlet UILabel *menu;
-@property (weak, nonatomic) IBOutlet UIImageView *currentImage;
+@interface ShortListViewController ()
+
 @end
 
-@implementation SwipeViewController
-@synthesize r;
+@implementation ShortListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.menu setText:r.name];
-    [[self navigationItem] setTitle:r.name];
 }
 
 - (void)didReceiveMemoryWarning {

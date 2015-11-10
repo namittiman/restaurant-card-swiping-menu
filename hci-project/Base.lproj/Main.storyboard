@@ -2,9 +2,10 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0Yn-Uv-kwn">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
-        <!--Restaurants-->
+        <!--Restaurants View Controller-->
         <scene sceneID="FQS-dH-BQc">
             <objects>
                 <viewController id="Tw3-IL-NSb" customClass="RestaurantsViewController" sceneMemberID="viewController">
@@ -13,7 +14,7 @@
                         <viewControllerLayoutGuide type="bottom" id="EUz-t4-mZA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cC5-kY-6Aw">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZnZ-89-OJX">
@@ -111,7 +112,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Restaurants" id="mI5-Cn-jo9"/>
+                    <navigationItem key="navigationItem" id="mI5-Cn-jo9"/>
                     <connections>
                         <outlet property="myCollectionView" destination="ZnZ-89-OJX" id="C4e-dP-cLL"/>
                         <outlet property="searchDisplayController" destination="ZsI-e0-hbx" id="8X2-bc-JzE"/>
@@ -138,10 +139,9 @@
             </objects>
             <point key="canvasLocation" x="484.5" y="-510"/>
         </scene>
-        <!--MyAppName-->
+        <!--Restaurant-->
         <scene sceneID="Bw2-TE-HaI">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3gz-p7-hzB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="FeY-lF-SNK" customClass="SwipeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ahn-2Z-lAk"/>
@@ -151,37 +151,157 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IhA-eQ-wC7">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ml-N9-Of9">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
+                                <state key="normal" title="Button" image="noButton"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="66" y="710" width="155" height="23"/>
+                                    <rect key="frame" x="122" y="540" width="70" height="70"/>
                                 </variation>
-                            </label>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32i-JR-wCG">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button" image="yesButton"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="213" y="540" width="70" height="70"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJH-o6-a7c">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="i"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="314" y="560" width="30" height="30"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8r4-w6-dVA">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button" image="redo"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="56" y="560" width="30" height="30"/>
+                                </variation>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Mu-va-764">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="64" width="400" height="399"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="6dJ-zx-dm7" kind="embed" id="uRV-ba-84N"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="IhA-eQ-wC7"/>
+                                <exclude reference="9Ml-N9-Of9"/>
+                                <exclude reference="32i-JR-wCG"/>
+                                <exclude reference="AJH-o6-a7c"/>
+                                <exclude reference="8r4-w6-dVA"/>
+                                <exclude reference="9Mu-va-764"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="IhA-eQ-wC7"/>
+                                <include reference="9Ml-N9-Of9"/>
+                                <include reference="32i-JR-wCG"/>
+                                <include reference="AJH-o6-a7c"/>
+                                <include reference="8r4-w6-dVA"/>
+                                <include reference="9Mu-va-764"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="MyAppName" id="I41-ee-e2e"/>
-                    <connections>
-                        <outlet property="menu" destination="IhA-eQ-wC7" id="jcW-7M-r6M"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="Restaurant" id="I41-ee-e2e">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="done" id="Bg0-h2-a0Q">
+                                <connections>
+                                    <segue destination="2kX-Au-6Eb" kind="show" id="i8H-hg-Hib"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="action" id="VQe-vh-a2u"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3gz-p7-hzB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1291.5" y="-510"/>
+        </scene>
+        <!--My Short List-->
+        <scene sceneID="b8o-ra-zxS">
+            <objects>
+                <viewController id="2kX-Au-6Eb" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FDC-qw-WhC"/>
+                        <viewControllerLayoutGuide type="bottom" id="VCV-Vc-hD1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5eE-wg-vbD">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="R7K-Z0-z1y">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="X6Z-UX-OoI">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="AbR-0J-TaR">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <animations/>
+                                    </collectionViewCell>
+                                </cells>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="64" width="400" height="437"/>
+                                </variation>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bfg-15-pYe">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Place Order">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="160" y="516" width="81" height="30"/>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="R7K-Z0-z1y"/>
+                                <exclude reference="Bfg-15-pYe"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="R7K-Z0-z1y"/>
+                                <include reference="Bfg-15-pYe"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Short List" id="hGS-or-Na6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="hp8-gJ-4eR"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8dh-ZC-Brt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2238" y="-694.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Shc-uU-5yc">
@@ -202,5 +322,24 @@
             </objects>
             <point key="canvasLocation" x="-433.5" y="-510"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="bHf-LX-Owh">
+            <objects>
+                <viewController id="6dJ-zx-dm7" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bfn-5g-Xat">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UX1-78-JOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
+    <resources>
+        <image name="i" width="54" height="54"/>
+        <image name="noButton" width="70" height="70"/>
+        <image name="redo" width="60" height="60"/>
+        <image name="yesButton" width="70" height="70"/>
+    </resources>
 </document>

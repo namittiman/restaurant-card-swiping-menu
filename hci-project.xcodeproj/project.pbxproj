@@ -10,7 +10,6 @@
 		7DD6201B1BF17368000D39DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6201A1BF17368000D39DE /* main.m */; };
 		7DD6201E1BF17368000D39DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6201D1BF17368000D39DE /* AppDelegate.m */; };
 		7DD620241BF17368000D39DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DD620221BF17368000D39DE /* Main.storyboard */; };
-		7DD620261BF17368000D39DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DD620251BF17368000D39DE /* Assets.xcassets */; };
 		7DD620291BF17368000D39DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DD620271BF17368000D39DE /* LaunchScreen.storyboard */; };
 		7DD620341BF17368000D39DE /* hci_projectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD620331BF17368000D39DE /* hci_projectTests.m */; };
 		7DD6203F1BF17368000D39DE /* hci_projectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6203E1BF17368000D39DE /* hci_projectUITests.m */; };
@@ -18,6 +17,12 @@
 		7DD6205A1BF17E90000D39DE /* RestaurantCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD620591BF17E90000D39DE /* RestaurantCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		7DD6205D1BF1A8CD000D39DE /* SwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6205C1BF1A8CD000D39DE /* SwipeViewController.m */; settings = {ASSET_TAGS = (); }; };
 		7DD620631BF1BE56000D39DE /* RestaurantsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD620621BF1BE56000D39DE /* RestaurantsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		7DD6206C1BF1FF3F000D39DE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD620651BF1FF3F000D39DE /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
+		7DD6206D1BF1FF3F000D39DE /* DraggableViewBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD620671BF1FF3F000D39DE /* DraggableViewBackground.m */; settings = {ASSET_TAGS = (); }; };
+		7DD6206E1BF1FF3F000D39DE /* DraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD620691BF1FF3F000D39DE /* DraggableView.m */; settings = {ASSET_TAGS = (); }; };
+		7DD6206F1BF1FF3F000D39DE /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6206B1BF1FF3F000D39DE /* OverlayView.m */; settings = {ASSET_TAGS = (); }; };
+		7DD620711BF25435000D39DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DD620701BF25435000D39DE /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
+		7DD620741BF257F3000D39DE /* ShortListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD620731BF257F3000D39DE /* ShortListViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +48,6 @@
 		7DD6201C1BF17368000D39DE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7DD6201D1BF17368000D39DE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7DD620231BF17368000D39DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7DD620251BF17368000D39DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DD620281BF17368000D39DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7DD6202A1BF17368000D39DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DD6202F1BF17368000D39DE /* hci-projectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "hci-projectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +64,17 @@
 		7DD6205C1BF1A8CD000D39DE /* SwipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeViewController.m; sourceTree = "<group>"; };
 		7DD620611BF1BE56000D39DE /* RestaurantsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantsViewController.h; sourceTree = "<group>"; };
 		7DD620621BF1BE56000D39DE /* RestaurantsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantsViewController.m; sourceTree = "<group>"; };
+		7DD620641BF1FF3F000D39DE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7DD620651BF1FF3F000D39DE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7DD620661BF1FF3F000D39DE /* DraggableViewBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableViewBackground.h; sourceTree = "<group>"; };
+		7DD620671BF1FF3F000D39DE /* DraggableViewBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableViewBackground.m; sourceTree = "<group>"; };
+		7DD620681BF1FF3F000D39DE /* DraggableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableView.h; sourceTree = "<group>"; };
+		7DD620691BF1FF3F000D39DE /* DraggableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableView.m; sourceTree = "<group>"; };
+		7DD6206A1BF1FF3F000D39DE /* OverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayView.h; sourceTree = "<group>"; };
+		7DD6206B1BF1FF3F000D39DE /* OverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayView.m; sourceTree = "<group>"; };
+		7DD620701BF25435000D39DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7DD620721BF257F3000D39DE /* ShortListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortListViewController.h; sourceTree = "<group>"; };
+		7DD620731BF257F3000D39DE /* ShortListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +125,7 @@
 		7DD620181BF17368000D39DE /* hci-project */ = {
 			isa = PBXGroup;
 			children = (
+				7DD620701BF25435000D39DE /* Assets.xcassets */,
 				7DD6201C1BF17368000D39DE /* AppDelegate.h */,
 				7DD6201D1BF17368000D39DE /* AppDelegate.m */,
 				7DD620611BF1BE56000D39DE /* RestaurantsViewController.h */,
@@ -120,11 +136,20 @@
 				7DD620531BF17A52000D39DE /* Restaurant.m */,
 				7DD6205B1BF1A8CD000D39DE /* SwipeViewController.h */,
 				7DD6205C1BF1A8CD000D39DE /* SwipeViewController.m */,
+				7DD620641BF1FF3F000D39DE /* ViewController.h */,
+				7DD620651BF1FF3F000D39DE /* ViewController.m */,
+				7DD620661BF1FF3F000D39DE /* DraggableViewBackground.h */,
+				7DD620671BF1FF3F000D39DE /* DraggableViewBackground.m */,
+				7DD620681BF1FF3F000D39DE /* DraggableView.h */,
+				7DD620691BF1FF3F000D39DE /* DraggableView.m */,
+				7DD6206A1BF1FF3F000D39DE /* OverlayView.h */,
+				7DD6206B1BF1FF3F000D39DE /* OverlayView.m */,
 				7DD620221BF17368000D39DE /* Main.storyboard */,
 				7DD620271BF17368000D39DE /* LaunchScreen.storyboard */,
 				7DD6202A1BF17368000D39DE /* Info.plist */,
-				7DD620251BF17368000D39DE /* Assets.xcassets */,
 				7DD620191BF17368000D39DE /* Supporting Files */,
+				7DD620721BF257F3000D39DE /* ShortListViewController.h */,
+				7DD620731BF257F3000D39DE /* ShortListViewController.m */,
 			);
 			path = "hci-project";
 			sourceTree = "<group>";
@@ -259,7 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DD620291BF17368000D39DE /* LaunchScreen.storyboard in Resources */,
-				7DD620261BF17368000D39DE /* Assets.xcassets in Resources */,
+				7DD620711BF25435000D39DE /* Assets.xcassets in Resources */,
 				7DD620241BF17368000D39DE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,10 +310,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DD6206E1BF1FF3F000D39DE /* DraggableView.m in Sources */,
+				7DD6206F1BF1FF3F000D39DE /* OverlayView.m in Sources */,
+				7DD6206D1BF1FF3F000D39DE /* DraggableViewBackground.m in Sources */,
+				7DD6206C1BF1FF3F000D39DE /* ViewController.m in Sources */,
 				7DD620541BF17A52000D39DE /* Restaurant.m in Sources */,
 				7DD6205A1BF17E90000D39DE /* RestaurantCollectionViewCell.m in Sources */,
 				7DD620631BF1BE56000D39DE /* RestaurantsViewController.m in Sources */,
 				7DD6201E1BF17368000D39DE /* AppDelegate.m in Sources */,
+				7DD620741BF257F3000D39DE /* ShortListViewController.m in Sources */,
 				7DD6205D1BF1A8CD000D39DE /* SwipeViewController.m in Sources */,
 				7DD6201B1BF17368000D39DE /* main.m in Sources */,
 			);
