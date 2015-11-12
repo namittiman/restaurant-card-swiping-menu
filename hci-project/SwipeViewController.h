@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Restaurant.h"
+#import "DraggableViewBackground.h"
 
 
 @interface SwipeViewController : UIViewController

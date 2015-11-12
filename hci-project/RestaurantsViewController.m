@@ -7,6 +7,7 @@
 //
 
 #import "RestaurantsViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface RestaurantsViewController ()
 {
@@ -38,64 +39,77 @@
     
     Restaurant *r = [[Restaurant alloc] init];
     
-    r.name = @"Brio Tuscan Grille";
+    r = [[Restaurant alloc] init];
+    r.name = @"Cristo's NY Style Pizza";
     r.filename = @"0";
+    r.notes = @"Italian, Pizza";
+    r.menu_items = [[NSMutableArray alloc] initWithObjects:@"r0-1",@"r0-2",@"r0-3",@"r0-4",@"r0-5", nil];
+    [restaurants addObject:r];
+    
+    r = [[Restaurant alloc] init];
+    r.name = @"Brio Tuscan Grille";
+    r.filename = @"1";
     r.notes = @"Italian, Mediterranean";
+    r.menu_items = [[NSMutableArray alloc] initWithObjects:@"r1-1",@"r1-2",@"r1-3",@"r1-4",@"r1-5", nil];
     [restaurants addObject:r];
     
     r = [[Restaurant alloc] init];
     r.name = @"Pho Vietnam";
-    r.filename = @"1";
+    r.filename = @"2";
     r.notes = @"Vietnamese";
+    r.menu_items = [[NSMutableArray alloc] initWithObjects:@"r2-1",@"r2-2",@"r2-3",@"r2-4",@"r2-5", nil];
     [restaurants addObject:r];
     
     r = [[Restaurant alloc] init];
     r.name = @"Sushi Iwa";
-    r.filename = @"2";
+    r.filename = @"3";
     r.notes = @"Asian, Sushi, Thai";
+    r.menu_items = [[NSMutableArray alloc] initWithObjects:@"r3-1",@"r3-2",@"r3-3",@"r3-4",@"r3-5", nil];
     [restaurants addObject:r];
     
     r = [[Restaurant alloc] init];
     r.name = @"The Palace International";
-    r.filename = @"3";
+    r.filename = @"4";
     r.notes = @"African, Caribbean, Vegetarian";
+    r.menu_items = [[NSMutableArray alloc] initWithObjects:@"r4-1",@"r4-2",@"r4-3",@"r4-4",@"r4-5", nil];
     [restaurants addObject:r];
     
     r = [[Restaurant alloc] init];
     r.name = @"Sunrise Biscuit Kitchen";
-    r.filename = @"4";
+    r.filename = @"5";
     r.notes = @"American, Breakfast";
+    r.menu_items = [[NSMutableArray alloc] initWithObjects:@"r5-1",@"r5-2",@"r5-3",@"r5-4",@"r5-5", nil];
     [restaurants addObject:r];
     
     r = [[Restaurant alloc] init];
     r.name = @"One Restaurant";
-    r.filename = @"5";
+    r.filename = @"6";
     r.notes = @" American, International";
+    r.menu_items = [[NSMutableArray alloc] initWithObjects:@"r6-1",@"r6-2",@"r6-3",@"r6-4",@"r6-5", nil];
     [restaurants addObject:r];
     
     r = [[Restaurant alloc] init];
     r.name = @"The Cowfish Sushi Burger Bar";
-    r.filename = @"6";
+    r.filename = @"7";
     r.notes = @"Burger, Sushi, Fusion";
+    r.menu_items = [[NSMutableArray alloc] initWithObjects:@"r7-1",@"r7-2",@"r7-3",@"r7-4",@"r7-5", nil];
     [restaurants addObject:r];
     
     r = [[Restaurant alloc] init];
     r.name = @"Lantern";
-    r.filename = @"7";
+    r.filename = @"8";
     r.notes = @" Asian, Japanese, Thai";
+    r.menu_items = [[NSMutableArray alloc] initWithObjects:@"r8-1",@"r8-2",@"r8-3",@"r8-4",@"r8-5", nil];
     [restaurants addObject:r];
     
     r = [[Restaurant alloc] init];
     r.name = @"Dame's Chicken & Waffles";
-    r.filename = @"8";
+    r.filename = @"9";
     r.notes = @"Vietnamese";
+    r.menu_items = [[NSMutableArray alloc] initWithObjects:@"r9-1",@"r9-2",@"r9-3",@"r9-4",@"r9-5", nil];
     [restaurants addObject:r];
     
-    r = [[Restaurant alloc] init];
-    r.name = @"Cristo's NY Style Pizza";
-    r.filename = @"9";
-    r.notes = @"Italian, Pizza";
-    [restaurants addObject:r];
+    
     
 }
 
@@ -111,7 +125,7 @@
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-
+    
     return 20;
 }
 
@@ -119,12 +133,14 @@
     RestaurantCollectionViewCell *cell = (RestaurantCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     
     // Configure the cell
+    cell.layer.masksToBounds = YES;
+    cell.layer.cornerRadius = 8;
     
     //[cell setBackgroundColor:[UIColor redColor]];
-   // int restaurantNumber = indexPath.row % 10;
+    // int restaurantNumber = indexPath.row % 10;
     
     Restaurant *current = [restaurants objectAtIndex:indexPath.row%10];
-   // Photo *current = [photos objectAtIndex:indexPath.row];
+    // Photo *current = [photos objectAtIndex:indexPath.row];
     cell.restaurantNameLabel.text = [current name];
     
     cell.imageView.image = [UIImage imageNamed:current.filename];

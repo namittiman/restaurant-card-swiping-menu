@@ -17,7 +17,6 @@
 		7DD6205A1BF17E90000D39DE /* RestaurantCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD620591BF17E90000D39DE /* RestaurantCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		7DD6205D1BF1A8CD000D39DE /* SwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6205C1BF1A8CD000D39DE /* SwipeViewController.m */; settings = {ASSET_TAGS = (); }; };
 		7DD620631BF1BE56000D39DE /* RestaurantsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD620621BF1BE56000D39DE /* RestaurantsViewController.m */; settings = {ASSET_TAGS = (); }; };
-		7DD6206C1BF1FF3F000D39DE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD620651BF1FF3F000D39DE /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
 		7DD6206D1BF1FF3F000D39DE /* DraggableViewBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD620671BF1FF3F000D39DE /* DraggableViewBackground.m */; settings = {ASSET_TAGS = (); }; };
 		7DD6206E1BF1FF3F000D39DE /* DraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD620691BF1FF3F000D39DE /* DraggableView.m */; settings = {ASSET_TAGS = (); }; };
 		7DD6206F1BF1FF3F000D39DE /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6206B1BF1FF3F000D39DE /* OverlayView.m */; settings = {ASSET_TAGS = (); }; };
@@ -64,8 +63,6 @@
 		7DD6205C1BF1A8CD000D39DE /* SwipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeViewController.m; sourceTree = "<group>"; };
 		7DD620611BF1BE56000D39DE /* RestaurantsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantsViewController.h; sourceTree = "<group>"; };
 		7DD620621BF1BE56000D39DE /* RestaurantsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantsViewController.m; sourceTree = "<group>"; };
-		7DD620641BF1FF3F000D39DE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7DD620651BF1FF3F000D39DE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7DD620661BF1FF3F000D39DE /* DraggableViewBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableViewBackground.h; sourceTree = "<group>"; };
 		7DD620671BF1FF3F000D39DE /* DraggableViewBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableViewBackground.m; sourceTree = "<group>"; };
 		7DD620681BF1FF3F000D39DE /* DraggableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableView.h; sourceTree = "<group>"; };
@@ -130,14 +127,8 @@
 				7DD6201D1BF17368000D39DE /* AppDelegate.m */,
 				7DD620611BF1BE56000D39DE /* RestaurantsViewController.h */,
 				7DD620621BF1BE56000D39DE /* RestaurantsViewController.m */,
-				7DD620581BF17E90000D39DE /* RestaurantCollectionViewCell.h */,
-				7DD620591BF17E90000D39DE /* RestaurantCollectionViewCell.m */,
-				7DD620521BF17A52000D39DE /* Restaurant.h */,
-				7DD620531BF17A52000D39DE /* Restaurant.m */,
 				7DD6205B1BF1A8CD000D39DE /* SwipeViewController.h */,
 				7DD6205C1BF1A8CD000D39DE /* SwipeViewController.m */,
-				7DD620641BF1FF3F000D39DE /* ViewController.h */,
-				7DD620651BF1FF3F000D39DE /* ViewController.m */,
 				7DD620661BF1FF3F000D39DE /* DraggableViewBackground.h */,
 				7DD620671BF1FF3F000D39DE /* DraggableViewBackground.m */,
 				7DD620681BF1FF3F000D39DE /* DraggableView.h */,
@@ -147,6 +138,10 @@
 				7DD620221BF17368000D39DE /* Main.storyboard */,
 				7DD620271BF17368000D39DE /* LaunchScreen.storyboard */,
 				7DD6202A1BF17368000D39DE /* Info.plist */,
+				7DD620581BF17E90000D39DE /* RestaurantCollectionViewCell.h */,
+				7DD620591BF17E90000D39DE /* RestaurantCollectionViewCell.m */,
+				7DD620521BF17A52000D39DE /* Restaurant.h */,
+				7DD620531BF17A52000D39DE /* Restaurant.m */,
 				7DD620191BF17368000D39DE /* Supporting Files */,
 				7DD620721BF257F3000D39DE /* ShortListViewController.h */,
 				7DD620731BF257F3000D39DE /* ShortListViewController.m */,
@@ -313,7 +308,6 @@
 				7DD6206E1BF1FF3F000D39DE /* DraggableView.m in Sources */,
 				7DD6206F1BF1FF3F000D39DE /* OverlayView.m in Sources */,
 				7DD6206D1BF1FF3F000D39DE /* DraggableViewBackground.m in Sources */,
-				7DD6206C1BF1FF3F000D39DE /* ViewController.m in Sources */,
 				7DD620541BF17A52000D39DE /* Restaurant.m in Sources */,
 				7DD6205A1BF17E90000D39DE /* RestaurantCollectionViewCell.m in Sources */,
 				7DD620631BF1BE56000D39DE /* RestaurantsViewController.m in Sources */,
