@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MyShortList.h"
+#import "Item.h"
+#import "ProductCell.h"
+#import "ItemDetailsViewController.h"
 
-@interface ShortListViewController : UIViewController
+
+
+@interface ShortListViewController : UIViewController <UICollectionViewDataSource,UICollectionViewDelegate>
+@property (nonatomic) MyShortList *myShortList;
+@property (nonatomic) NSInteger index;
+@property (weak, nonatomic) IBOutlet UICollectionView *myCollectionView;
+
+
 
 @end

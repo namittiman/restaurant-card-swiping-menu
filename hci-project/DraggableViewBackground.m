@@ -27,6 +27,7 @@ static const float CARD_WIDTH = 300; //%%% width of the draggable card
 @synthesize allCards;//%%% all the cards
 @synthesize r;
 @synthesize currentItemIndex;
+@synthesize myShortList;
 
 
 
@@ -39,6 +40,10 @@ static const float CARD_WIDTH = 300; //%%% width of the draggable card
         [self setupView];
         self.r = R;
         exampleCardLabels = r.menu_items;
+        myShortList = [[MyShortList alloc] init];
+
+        myShortList.menu_items = [[NSMutableArray alloc] init];
+
         loadedCards = [[NSMutableArray alloc] init];
         allCards = [[NSMutableArray alloc] init];
         cardsLoadedIndex = 0;
@@ -122,7 +127,6 @@ static const float CARD_WIDTH = 300; //%%% width of the draggable card
 {
     //do whatever you want with the card that was swiped
     //    DraggableView *c = (DraggableView *)card;
-    
     currentItemIndex++;
     
     [loadedCards removeObjectAtIndex:0]; //%%% card was swiped, so it's no longer a "loaded card"
@@ -141,6 +145,15 @@ static const float CARD_WIDTH = 300; //%%% width of the draggable card
 {
     //do whatever you want with the card that was swiped
     //    DraggableView *c = (DraggableView *)card;
+    //Take the item at currentItemIndex and add it to the MyshortList object
+    // the object will be passed to various places
+    
+    Item *current_item = (Item*)[exampleCardLabels objectAtIndex:currentItemIndex];
+    Item *i = [[Item alloc]init];
+    i.name = current_item.name;
+    i.photo_filename= current_item.photo_filename;
+    i.notes =   current_item.notes;
+    [myShortList.menu_items addObject:i];
     
     currentItemIndex++;
     

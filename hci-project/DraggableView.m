@@ -54,7 +54,7 @@
         [self addSubview:information];
        
         
-        overlayView = [[OverlayView alloc]initWithFrame:CGRectMake(self.frame.size.width/2-100, 0, 100, 100)];
+        overlayView = [[OverlayView alloc]initWithFrame:CGRectMake(self.frame.size.width/2-75, self.frame.size.height/2-75, 150, 150)];
         overlayView.alpha = 0;
         [self addSubview:overlayView];
     }

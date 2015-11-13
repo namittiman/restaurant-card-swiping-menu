@@ -79,21 +79,20 @@
     
     if([segue.identifier isEqualToString:@"sequeToDetails"])
     {
-    ItemDetailsViewController* idvc = [segue destinationViewController];
+        ItemDetailsViewController* idvc = [segue destinationViewController];
     
-    NSLog([NSString stringWithFormat:@"CardsLoadedIndex : %ld",(long)self.dvb.currentItemIndex]);
+        NSLog([NSString stringWithFormat:@"CardsLoadedIndex : %ld",(long)self.dvb.currentItemIndex]);
     
-    
-    idvc.i = [self.r.menu_items objectAtIndex:(int)self.dvb.currentItemIndex];
+        idvc.i = [self.r.menu_items objectAtIndex:(int)self.dvb.currentItemIndex];
     }
     
     if([segue.identifier isEqualToString:@"sequeToShortList"])
     {
-        //ShortListViewController* slvc = [segue destinationViewController];
+        ShortListViewController* slvc = [segue destinationViewController];
         
-        //NSLog([NSString stringWithFormat:@"CardsLoadedIndex : %ld",(long)self.dvb.currentItemIndex]);
+        NSLog([NSString stringWithFormat:@"Count of menuitems : %d",self.dvb.myShortList.menu_items.count]);
         
-        //idvc.i = [self.r.menu_items objectAtIndex:(int)self.dvb.currentItemIndex];
+        slvc.myShortList = self.dvb.myShortList;
     }
     
     

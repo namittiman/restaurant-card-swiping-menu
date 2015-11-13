@@ -16,8 +16,8 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor whiteColor];
-        imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"noButton"]];
+        //self.backgroundColor = [UIColor whiteColor];
+        imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"thumps_down"]];
         [self addSubview:imageView];
     }
     return self;
@@ -32,16 +32,16 @@
     _mode = mode;
     
     if(mode == GGOverlayViewModeLeft) {
-        imageView.image = [UIImage imageNamed:@"noButton"];
+        imageView.image = [UIImage imageNamed:@"thumps_down"];
     } else {
-        imageView.image = [UIImage imageNamed:@"yesButton"];
+        imageView.image = [UIImage imageNamed:@"thumps_up"];
     }
 }
 
 -(void)layoutSubviews
 {
     [super layoutSubviews];
-    imageView.frame = CGRectMake(50, 50, 100, 100);
+    imageView.frame = CGRectMake(0, 0, 150, 150);
 }
 
 /*
