@@ -20,8 +20,8 @@
 //this makes it so only two cards are loaded at a time to
 //avoid performance and memory costs
 static const int MAX_BUFFER_SIZE = 2; //%%% max number of cards loaded at any given time, must be greater than 1
-static const float CARD_HEIGHT = 400; //%%% height of the draggable card
-static const float CARD_WIDTH = 300; //%%% width of the draggable card
+static const float CARD_HEIGHT = 444; //%%% height of the draggable card
+static const float CARD_WIDTH = 394; //%%% width of the draggable card
 
 @synthesize exampleCardLabels; //%%% all the labels I'm using as example data at the moment
 @synthesize allCards;//%%% all the cards
@@ -79,7 +79,7 @@ static const float CARD_WIDTH = 300; //%%% width of the draggable card
 // to get rid of it (eg: if you are building cards from data from the internet)
 -(DraggableView *)createDraggableViewWithDataAtIndex:(NSInteger)index
 {
-    DraggableView *draggableView = [[DraggableView alloc]initWithFrame:CGRectMake((self.frame.size.width - CARD_WIDTH)/2, (self.frame.size.height - CARD_HEIGHT)/2, CARD_WIDTH, CARD_HEIGHT)];
+    DraggableView *draggableView = [[DraggableView alloc]initWithFrame:CGRectMake(10, 120, CARD_WIDTH, CARD_HEIGHT)];
 
     Item *current_item = (Item*)[exampleCardLabels objectAtIndex:index];
     [draggableView.image setImage:[UIImage imageNamed: current_item.photo_filename ]];

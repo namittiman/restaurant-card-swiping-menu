@@ -31,6 +31,7 @@
         UIView *sbg = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
         self.selectedBackgroundView = sbg;
         self.selectedBackgroundView.backgroundColor = [UIColor lightGrayColor];
+        
     }
     return self;
 }

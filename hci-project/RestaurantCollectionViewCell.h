@@ -11,6 +11,7 @@
 @interface RestaurantCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *restaurantNameLabel;
+@property (weak, nonatomic) IBOutlet UITextView *notes;
 
 
 @end

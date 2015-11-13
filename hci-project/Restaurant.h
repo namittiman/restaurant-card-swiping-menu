@@ -12,7 +12,11 @@
 
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *filename;
+@property (nonatomic) NSString *cuisine;
+@property (nonatomic) NSString *location;
+@property (nonatomic) double rating;
 @property (nonatomic) NSString *notes;
-@property (nonatomic) NSMutableArray *menu_items;
+
+@property (nonatomic) NSMutableArray *menu_items;//Array of Item
 
 @end

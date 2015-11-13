@@ -474,6 +474,7 @@
     Restaurant *current = [restaurants objectAtIndex:indexPath.row%10];
     // Photo *current = [photos objectAtIndex:indexPath.row];
     cell.restaurantNameLabel.text = [current name];
+    // cell.notes.text = [current notes];
     
     cell.imageView.image = [UIImage imageNamed:current.filename];
     
