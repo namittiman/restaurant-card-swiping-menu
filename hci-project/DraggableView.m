@@ -36,26 +36,23 @@
     if (self) {
         [self setupView];
         
-#warning placeholder stuff, replace with card-specific information {
-        //information = [[UILabel alloc]initWithFrame:CGRectMake(0, 50, self.frame.size.width, 100)];
-        image = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.width)];
-        //UIImage *pic = [UIImage imageNamed: @"r0-1"];
-        //[image setImage:[UIImage imageNamed: @"r0-1"]];
+        information = [[UILabel alloc]initWithFrame:CGRectMake(20, self.frame.size.height-50, self.frame.size.width, 50)];
+        image = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height-50)];
+
         
-        //information.text = @"no info given";
+        information.text = @"no info given";
         //[information setTextAlignment:NSTextAlignmentCenter];
-        //information.textColor = [UIColor blackColor];
+        information.textColor = [UIColor blackColor];
+        
         
         self.backgroundColor = [UIColor whiteColor];
-#warning placeholder stuff, replace with card-specific information }
-        
-        
         
         panGestureRecognizer = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(beingDragged:)];
         
         [self addGestureRecognizer:panGestureRecognizer];
-        //[self addSubview:information];
-        [self addSubview:image];
+         [self addSubview:image];
+        [self addSubview:information];
+       
         
         overlayView = [[OverlayView alloc]initWithFrame:CGRectMake(self.frame.size.width/2-100, 0, 100, 100)];
         overlayView.alpha = 0;

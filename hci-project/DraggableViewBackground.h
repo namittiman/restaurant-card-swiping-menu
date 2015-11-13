@@ -33,6 +33,7 @@
 #import <UIKit/UIKit.h>
 #import "DraggableView.h"
 #import "Restaurant.h"
+#import "Item.h"
 
 
 @interface DraggableViewBackground : UIView <DraggableViewDelegate>
@@ -46,6 +47,8 @@
 @property (retain,nonatomic)NSMutableArray* allCards; //%%% the labels the cards
 @property (nonatomic) Restaurant *r;
 @property (nonatomic) NSString *s;
+@property (nonatomic) NSMutableArray* loadedCards;
+@property (nonatomic) NSInteger currentItemIndex;
 
 
 @end

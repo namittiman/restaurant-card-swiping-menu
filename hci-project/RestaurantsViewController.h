@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Restaurant.h"
+#import "Item.h"
 #import "RestaurantCollectionViewCell.h"
 #import "SwipeViewController.h"
 

@@ -26,6 +26,9 @@ static const float CARD_WIDTH = 300; //%%% width of the draggable card
 @synthesize exampleCardLabels; //%%% all the labels I'm using as example data at the moment
 @synthesize allCards;//%%% all the cards
 @synthesize r;
+@synthesize currentItemIndex;
+
+
 
 
 - (id)initWithFrame:(CGRect)frame andRestaurant:(Restaurant*)R;
@@ -36,10 +39,10 @@ static const float CARD_WIDTH = 300; //%%% width of the draggable card
         [self setupView];
         self.r = R;
         exampleCardLabels = r.menu_items;
-        //[[NSArray alloc]initWithObjects:@"first",@"second",@"third",@"fourth",@"last", nil]; //%%% placeholder for card-specific information
         loadedCards = [[NSMutableArray alloc] init];
         allCards = [[NSMutableArray alloc] init];
         cardsLoadedIndex = 0;
+        currentItemIndex = 0;
         [self loadCards];
     }
     return self;
@@ -49,7 +52,6 @@ static const float CARD_WIDTH = 300; //%%% width of the draggable card
 -(void)setupView
 {
     
-#warning customize all of this.  These are just place holders to make it look pretty
     self.backgroundColor = [UIColor colorWithRed:.92 green:.93 blue:.95 alpha:1]; //the gray background colors
     menuButton = [[UIButton alloc]initWithFrame:CGRectMake(17, 34, 22, 15)];
     [menuButton setImage:[UIImage imageNamed:@"menuButton"] forState:UIControlStateNormal];
@@ -67,15 +69,17 @@ static const float CARD_WIDTH = 300; //%%% width of the draggable card
     //[self addSubview:checkButton];
 }
 
-#warning include own card customization here!
 //%%% creates a card and returns it.  This should be customized to fit your needs.
 // use "index" to indicate where the information should be pulled.  If this doesn't apply to you, feel free
 // to get rid of it (eg: if you are building cards from data from the internet)
 -(DraggableView *)createDraggableViewWithDataAtIndex:(NSInteger)index
 {
     DraggableView *draggableView = [[DraggableView alloc]initWithFrame:CGRectMake((self.frame.size.width - CARD_WIDTH)/2, (self.frame.size.height - CARD_HEIGHT)/2, CARD_WIDTH, CARD_HEIGHT)];
-    draggableView.information.text = [exampleCardLabels objectAtIndex:index]; //%%% placeholder for card-specific information
-    [draggableView.image setImage:[UIImage imageNamed: [exampleCardLabels objectAtIndex:index]]];
+
+    Item *current_item = (Item*)[exampleCardLabels objectAtIndex:index];
+    [draggableView.image setImage:[UIImage imageNamed: current_item.photo_filename ]];
+    [draggableView.information setText:current_item.name];
+    
     draggableView.delegate = self;
     return draggableView;
 }
@@ -119,6 +123,8 @@ static const float CARD_WIDTH = 300; //%%% width of the draggable card
     //do whatever you want with the card that was swiped
     //    DraggableView *c = (DraggableView *)card;
     
+    currentItemIndex++;
+    
     [loadedCards removeObjectAtIndex:0]; //%%% card was swiped, so it's no longer a "loaded card"
     
     if (cardsLoadedIndex < [allCards count]) { //%%% if we haven't reached the end of all cards, put another into the loaded cards
@@ -135,6 +141,8 @@ static const float CARD_WIDTH = 300; //%%% width of the draggable card
 {
     //do whatever you want with the card that was swiped
     //    DraggableView *c = (DraggableView *)card;
+    
+    currentItemIndex++;
     
     [loadedCards removeObjectAtIndex:0]; //%%% card was swiped, so it's no longer a "loaded card"
     

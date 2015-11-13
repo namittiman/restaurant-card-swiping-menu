@@ -34,6 +34,7 @@
 #import <UIKit/UIKit.h>
 #import "OverlayView.h"
 #import "Restaurant.h"
+#import "Item.h"
 
 @protocol DraggableViewDelegate <NSObject>
 

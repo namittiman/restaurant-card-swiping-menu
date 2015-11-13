@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D4CB75E1BF5CB7B004386F0 /* ItemDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CB75D1BF5CB7B004386F0 /* ItemDetailsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		7D4CB7611BF5CCC3004386F0 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CB7601BF5CCC3004386F0 /* Item.m */; settings = {ASSET_TAGS = (); }; };
 		7DD6201B1BF17368000D39DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6201A1BF17368000D39DE /* main.m */; };
 		7DD6201E1BF17368000D39DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6201D1BF17368000D39DE /* AppDelegate.m */; };
 		7DD620241BF17368000D39DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DD620221BF17368000D39DE /* Main.storyboard */; };
@@ -42,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D4CB75C1BF5CB7B004386F0 /* ItemDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDetailsViewController.h; sourceTree = "<group>"; };
+		7D4CB75D1BF5CB7B004386F0 /* ItemDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailsViewController.m; sourceTree = "<group>"; };
+		7D4CB75F1BF5CCC3004386F0 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Item.h; path = ../Item.h; sourceTree = "<group>"; };
+		7D4CB7601BF5CCC3004386F0 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Item.m; path = ../Item.m; sourceTree = "<group>"; };
 		7DD620161BF17368000D39DE /* hci-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hci-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DD6201A1BF17368000D39DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7DD6201C1BF17368000D39DE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -123,8 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				7DD620701BF25435000D39DE /* Assets.xcassets */,
-				7DD6201C1BF17368000D39DE /* AppDelegate.h */,
-				7DD6201D1BF17368000D39DE /* AppDelegate.m */,
 				7DD620611BF1BE56000D39DE /* RestaurantsViewController.h */,
 				7DD620621BF1BE56000D39DE /* RestaurantsViewController.m */,
 				7DD6205B1BF1A8CD000D39DE /* SwipeViewController.h */,
@@ -135,16 +139,12 @@
 				7DD620691BF1FF3F000D39DE /* DraggableView.m */,
 				7DD6206A1BF1FF3F000D39DE /* OverlayView.h */,
 				7DD6206B1BF1FF3F000D39DE /* OverlayView.m */,
-				7DD620221BF17368000D39DE /* Main.storyboard */,
-				7DD620271BF17368000D39DE /* LaunchScreen.storyboard */,
-				7DD6202A1BF17368000D39DE /* Info.plist */,
-				7DD620581BF17E90000D39DE /* RestaurantCollectionViewCell.h */,
-				7DD620591BF17E90000D39DE /* RestaurantCollectionViewCell.m */,
-				7DD620521BF17A52000D39DE /* Restaurant.h */,
-				7DD620531BF17A52000D39DE /* Restaurant.m */,
-				7DD620191BF17368000D39DE /* Supporting Files */,
 				7DD620721BF257F3000D39DE /* ShortListViewController.h */,
 				7DD620731BF257F3000D39DE /* ShortListViewController.m */,
+				7D4CB75C1BF5CB7B004386F0 /* ItemDetailsViewController.h */,
+				7D4CB75D1BF5CB7B004386F0 /* ItemDetailsViewController.m */,
+				7DD620221BF17368000D39DE /* Main.storyboard */,
+				7DD620191BF17368000D39DE /* Supporting Files */,
 			);
 			path = "hci-project";
 			sourceTree = "<group>";
@@ -152,6 +152,16 @@
 		7DD620191BF17368000D39DE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7DD620581BF17E90000D39DE /* RestaurantCollectionViewCell.h */,
+				7DD620591BF17E90000D39DE /* RestaurantCollectionViewCell.m */,
+				7DD6202A1BF17368000D39DE /* Info.plist */,
+				7DD620271BF17368000D39DE /* LaunchScreen.storyboard */,
+				7DD6201C1BF17368000D39DE /* AppDelegate.h */,
+				7DD6201D1BF17368000D39DE /* AppDelegate.m */,
+				7DD620521BF17A52000D39DE /* Restaurant.h */,
+				7DD620531BF17A52000D39DE /* Restaurant.m */,
+				7D4CB75F1BF5CCC3004386F0 /* Item.h */,
+				7D4CB7601BF5CCC3004386F0 /* Item.m */,
 				7DD6201A1BF17368000D39DE /* main.m */,
 			);
 			name = "Supporting Files";
@@ -305,8 +315,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D4CB7611BF5CCC3004386F0 /* Item.m in Sources */,
 				7DD6206E1BF1FF3F000D39DE /* DraggableView.m in Sources */,
 				7DD6206F1BF1FF3F000D39DE /* OverlayView.m in Sources */,
+				7D4CB75E1BF5CB7B004386F0 /* ItemDetailsViewController.m in Sources */,
 				7DD6206D1BF1FF3F000D39DE /* DraggableViewBackground.m in Sources */,
 				7DD620541BF17A52000D39DE /* Restaurant.m in Sources */,
 				7DD6205A1BF17E90000D39DE /* RestaurantCollectionViewCell.m in Sources */,
