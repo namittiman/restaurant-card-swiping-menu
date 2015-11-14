@@ -24,6 +24,7 @@
     // Do any additional setup after loading the view.
     [self.label setText:i.name];
     [self.image setImage:[UIImage imageNamed: i.photo_filename]];
+    
 
 }
 

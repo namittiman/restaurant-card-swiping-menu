@@ -11,6 +11,8 @@
 @interface Item : NSObject
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *photo_filename;
-
+@property (nonatomic) int spicy;
+@property (nonatomic) BOOL veg;
 @property (nonatomic) NSString *notes;
+@property (nonatomic) NSString *category;
 @end

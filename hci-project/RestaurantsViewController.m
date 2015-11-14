@@ -37,40 +37,51 @@
     
 //********************************************
     r = [[Restaurant alloc] init];
-    r.name = @"Cristo's NY Style Pizza";
-    r.filename = @"0";
-    r.notes = @"Italian, Pizza";
+    r.name = @"Cholanad Restaurant";
+    r.filename = @"cholanad";
+    r.notes = @"Indian";
+    r.rating = 5.0;
     
     r.menu_items = [[NSMutableArray alloc] init ];
     
     i = [[Item alloc]init];
-    i.name = @"r0-1";
-    i.photo_filename = @"r0-1";
-    i.notes = @"r0-1";
+    i.name = @"Masala Dosa";
+    i.photo_filename = @"masala-dosa";
+    i.notes = @"Description";
+    i.spicy = 2;
+    i.veg = YES;
     [r.menu_items addObject:i];
     
     i = [[Item alloc]init];
-    i.name = @"r0-2";
-    i.photo_filename = @"r0-2";
-    i.notes = @"r0-2";
-    [r.menu_items addObject:i];
-
-    i = [[Item alloc]init];
-    i.name = @"r0-3";
-    i.photo_filename = @"r0-3";
-    i.notes = @"r0-3";
+    i.name = @"Mango Lassi";
+    i.photo_filename = @"mango-lassi";
+    i.notes = @"Description";
+    i.spicy = 0;
+    i.veg = YES;
     [r.menu_items addObject:i];
     
     i = [[Item alloc]init];
-    i.name = @"r0-4";
-    i.photo_filename = @"r0-4";
-    i.notes = @"r0-4";
+    i.name = @"Medhu Vadai";
+    i.photo_filename = @"medhu-vadai";
+    i.notes = @"Description";
+    i.spicy = 1;
+    i.veg = YES;
     [r.menu_items addObject:i];
     
     i = [[Item alloc]init];
-    i.name = @"r0-5";
-    i.photo_filename = @"r0-5";
-    i.notes = @"r0-5";
+    i.name = @"Lamb Kofta";
+    i.photo_filename = @"lamb-kofta";
+    i.notes = @"Description";
+    i.spicy = 3;
+    i.veg = NO;
+    [r.menu_items addObject:i];
+    
+    i = [[Item alloc]init];
+    i.name = @"Chicken Puff";
+    i.photo_filename = @"chicken-puff";
+    i.notes = @"Description";
+    i.spicy = 2;
+    i.veg = NO;
     [r.menu_items addObject:i];
     
     [restaurants addObject:r];
@@ -81,6 +92,8 @@
     r.name = @"Brio Tuscan Grille";
     r.filename = @"1";
     r.notes = @"Italian, Mediterranean";
+    r.rating = 4.3;
+
     r.menu_items = [[NSMutableArray alloc] init ];
     
     i = [[Item alloc]init];
@@ -121,6 +134,8 @@
     r.name = @"Pho Vietnam";
     r.filename = @"2";
     r.notes = @"Vietnamese";
+    r.rating = 3.3;
+
     r.menu_items = [[NSMutableArray alloc] init ];
     
     i = [[Item alloc]init];
@@ -161,6 +176,8 @@
     r.name = @"Sushi Iwa";
     r.filename = @"3";
     r.notes = @"Asian, Sushi, Thai";
+    r.rating = 2.3;
+
     r.menu_items = [[NSMutableArray alloc] init ];
     
     i = [[Item alloc]init];
@@ -202,6 +219,8 @@
     r.name = @"The Palace International";
     r.filename = @"4";
     r.notes = @"African, Caribbean, Vegetarian";
+    r.rating = 1.3;
+
     r.menu_items = [[NSMutableArray alloc] init ];
     
     i = [[Item alloc]init];
@@ -458,7 +477,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return 20;
+    return 20;//set the number of resaurants
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -468,17 +487,22 @@
     cell.layer.masksToBounds = YES;
     cell.layer.cornerRadius = 8;
     
-    //[cell setBackgroundColor:[UIColor redColor]];
-    // int restaurantNumber = indexPath.row % 10;
+    Restaurant *current = [restaurants objectAtIndex:indexPath.row%10];//remove the %
     
-    Restaurant *current = [restaurants objectAtIndex:indexPath.row%10];
-    // Photo *current = [photos objectAtIndex:indexPath.row];
-    cell.restaurantNameLabel.text = [current name];
-    // cell.notes.text = [current notes];
-    
+    //Set the cell outlets
     cell.imageView.image = [UIImage imageNamed:current.filename];
+    cell.restaurantNameLabel.text = [current name];
+    //[cell.notes setText:[current notes]];
+    //[cell.cuisine setText:[current cuisine]];
+    [cell.rating setText:[NSString stringWithFormat:@"%1.1f",current.rating]];
+    int red,green,blue; //current.rating is between 1 to 5 say
     
+    //the lower the rating the lower the green , the higher the red
+    green= 24+(current.rating/(5-1))*(164-24); //24 164
+    red= 164-green;
     
+    cell.rating.backgroundColor = [UIColor colorWithRed:red/256.0 green:green/256.0 blue:24/256.0 alpha:1.0];
+    //[cell.location setText:[current location] ];
     return cell;
 }
 

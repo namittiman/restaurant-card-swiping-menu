@@ -83,7 +83,8 @@ static const float CARD_WIDTH = 394; //%%% width of the draggable card
 
     Item *current_item = (Item*)[exampleCardLabels objectAtIndex:index];
     [draggableView.image setImage:[UIImage imageNamed: current_item.photo_filename ]];
-    [draggableView.information setText:current_item.name];
+    [draggableView.item_name_label setText:current_item.name];
+    [draggableView.spice_image setImage:[UIImage imageNamed:[ NSString stringWithFormat:@"spicy%d",current_item.spicy ]]];
     
     draggableView.delegate = self;
     return draggableView;

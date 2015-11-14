@@ -45,31 +45,57 @@
                                             <rect key="frame" x="0.0" y="0.0" width="392.5" height="311"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xEL-3g-vjO">
+                                                <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xEL-3g-vjO">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                     <animations/>
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="0.0" y="0.0" width="392.5" height="311"/>
+                                                        <rect key="frame" x="-89" y="0.0" width="532.5" height="311"/>
                                                     </variation>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgK-Bi-INp">
                                                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                     <animations/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <size key="shadowOffset" width="1" height="0.0"/>
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="8" y="57" width="320" height="28"/>
+                                                        <rect key="frame" x="16" y="55" width="376.5" height="47"/>
                                                     </variation>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipis" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raz-Gl-fwF">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit er elit lamet" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raz-Gl-fwF">
+                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <size key="shadowOffset" width="1" height="0.0"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="17" y="242" width="320" height="32"/>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ti-dd-LFg">
                                                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="8" y="203" width="320" height="59"/>
+                                                        <rect key="frame" x="17" y="276" width="182" height="21"/>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wlv-iq-AEt">
+                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                    <animations/>
+                                                    <color key="backgroundColor" red="0.36616098105991696" green="0.80991820975968587" blue="0.038040761874326035" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="336" y="274" width="42" height="21"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
@@ -83,6 +109,8 @@
                                                 <exclude reference="xEL-3g-vjO"/>
                                                 <exclude reference="lgK-Bi-INp"/>
                                                 <exclude reference="raz-Gl-fwF"/>
+                                                <exclude reference="0ti-dd-LFg"/>
+                                                <exclude reference="Wlv-iq-AEt"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact">
@@ -90,10 +118,15 @@
                                                 <include reference="xEL-3g-vjO"/>
                                                 <include reference="lgK-Bi-INp"/>
                                                 <include reference="raz-Gl-fwF"/>
+                                                <include reference="0ti-dd-LFg"/>
+                                                <include reference="Wlv-iq-AEt"/>
                                             </mask>
                                         </variation>
                                         <connections>
+                                            <outlet property="cuisine" destination="raz-Gl-fwF" id="tRS-5G-a8i"/>
                                             <outlet property="imageView" destination="xEL-3g-vjO" id="sdE-pL-Jwe"/>
+                                            <outlet property="location" destination="0ti-dd-LFg" id="hUq-4m-apV"/>
+                                            <outlet property="rating" destination="Wlv-iq-AEt" id="GAF-QI-KE4"/>
                                             <outlet property="restaurantNameLabel" destination="lgK-Bi-INp" id="mAV-hG-9gw"/>
                                             <segue destination="FeY-lF-SNK" kind="show" identifier="sequeToSwipe" id="Rlq-Zu-j6f"/>
                                         </connections>
@@ -234,6 +267,9 @@
                                         <include reference="crR-Lj-pSS"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="thumps_up:" destination="FeY-lF-SNK" eventType="touchUpInside" id="eDk-by-IxW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1HF-Js-cJn">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -255,6 +291,9 @@
                                         <include reference="fVe-66-N2C"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="redo:" destination="FeY-lF-SNK" eventType="touchUpInside" id="cUZ-lv-2eE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXh-um-u5A">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -276,6 +315,9 @@
                                         <include reference="tyH-4r-Vd1"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="thumps_down:" destination="FeY-lF-SNK" eventType="touchUpInside" id="VBT-nj-4f7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -427,18 +469,18 @@
                                 <exclude reference="2a9-2T-RlM"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="8pt-h9-o8Q"/>
-                                <exclude reference="C6U-TD-opp"/>
-                                <exclude reference="mVD-aj-ud3"/>
+                                <exclude reference="g0m-Pc-30q"/>
                                 <exclude reference="4vg-a4-j2J"/>
                                 <exclude reference="5av-yz-65H"/>
                                 <exclude reference="Ebe-qx-jmF"/>
                                 <exclude reference="Rng-hb-K9x"/>
+                                <exclude reference="8pt-h9-o8Q"/>
+                                <exclude reference="C6U-TD-opp"/>
+                                <exclude reference="mVD-aj-ud3"/>
                                 <exclude reference="KWN-O8-xuf"/>
                                 <exclude reference="cCO-Qt-7Wh"/>
                                 <exclude reference="p4l-XQ-m39"/>
                                 <exclude reference="x7w-KH-Jag"/>
-                                <exclude reference="g0m-Pc-30q"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -448,18 +490,18 @@
                                 <include reference="2a9-2T-RlM"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="8pt-h9-o8Q"/>
-                                <include reference="C6U-TD-opp"/>
-                                <include reference="mVD-aj-ud3"/>
+                                <include reference="g0m-Pc-30q"/>
                                 <include reference="4vg-a4-j2J"/>
                                 <include reference="5av-yz-65H"/>
                                 <include reference="Ebe-qx-jmF"/>
                                 <include reference="Rng-hb-K9x"/>
+                                <include reference="8pt-h9-o8Q"/>
+                                <include reference="C6U-TD-opp"/>
+                                <include reference="mVD-aj-ud3"/>
                                 <include reference="KWN-O8-xuf"/>
                                 <include reference="cCO-Qt-7Wh"/>
                                 <include reference="p4l-XQ-m39"/>
                                 <include reference="x7w-KH-Jag"/>
-                                <include reference="g0m-Pc-30q"/>
                             </mask>
                         </variation>
                     </view>
@@ -513,7 +555,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="8" y="154" width="42" height="21"/>
+                                                        <rect key="frame" x="8" y="154" width="167" height="21"/>
                                                     </variation>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6hc-gy-qa1">
@@ -621,6 +663,6 @@
         <image name="thumps_up" width="280" height="280"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ebe-oJ-Utv"/>
+        <segue reference="Gbs-MX-Wx5"/>
     </inferredMetricsTieBreakers>
 </document>

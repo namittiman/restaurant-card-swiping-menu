@@ -26,9 +26,10 @@
 @synthesize delegate;
 
 @synthesize panGestureRecognizer;
-@synthesize information;
+@synthesize item_name_label;
 @synthesize overlayView;
 @synthesize image;
+@synthesize spice_image ;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -36,13 +37,15 @@
     if (self) {
         [self setupView];
         
-        information = [[UILabel alloc]initWithFrame:CGRectMake(20, self.frame.size.height-50, self.frame.size.width, 50)];
+        item_name_label = [[UILabel alloc]initWithFrame:CGRectMake(20, self.frame.size.height-50, self.frame.size.width, 50)];
         image = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height-50)];
+        spice_image = [[UIImageView alloc]initWithFrame:CGRectMake(self.frame.size.width-50, self.frame.size.height-40, 30, 30)];
+
 
         
-        information.text = @"no info given";
+        item_name_label.text = @"no info given";
         //[information setTextAlignment:NSTextAlignmentCenter];
-        information.textColor = [UIColor blackColor];
+        item_name_label.textColor = [UIColor blackColor];
         
         
         self.backgroundColor = [UIColor whiteColor];
@@ -51,7 +54,9 @@
         
         [self addGestureRecognizer:panGestureRecognizer];
          [self addSubview:image];
-        [self addSubview:information];
+        [self addSubview:item_name_label];
+        [self addSubview:spice_image];
+
        
         
         overlayView = [[OverlayView alloc]initWithFrame:CGRectMake(self.frame.size.width/2-75, self.frame.size.height/2-75, 150, 150)];

@@ -16,6 +16,16 @@
 
 @implementation SwipeViewController
 @synthesize r;
+- (IBAction)thumps_up:(id)sender {
+    [self.dvb swipeRight];
+}
+- (IBAction)thumps_down:(id)sender {
+    [self.dvb swipeLeft];
+}
+- (IBAction)redo:(id)sender {
+}
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];

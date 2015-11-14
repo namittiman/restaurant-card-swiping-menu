@@ -50,7 +50,8 @@
 @property (nonatomic, strong)UIPanGestureRecognizer *panGestureRecognizer;
 @property (nonatomic)CGPoint originalPoint;
 @property (nonatomic,strong)OverlayView* overlayView;
-@property (nonatomic,strong)UILabel* information;
+@property (nonatomic,strong)UILabel* item_name_label;
+@property (nonatomic,strong)UIImageView* spice_image;
 @property (nonatomic,strong)UIImageView* image;
 //%%% a placeholder for any card-specific information
 

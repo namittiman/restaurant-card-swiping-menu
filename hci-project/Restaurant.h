@@ -16,7 +16,6 @@
 @property (nonatomic) NSString *location;
 @property (nonatomic) double rating;
 @property (nonatomic) NSString *notes;
-
 @property (nonatomic) NSMutableArray *menu_items;//Array of Item
 
 @end

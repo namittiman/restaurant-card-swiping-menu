@@ -42,6 +42,9 @@
 //methods called in DraggableView
 -(void)cardSwipedLeft:(UIView *)card;
 -(void)cardSwipedRight:(UIView *)card;
+-(void)swipeRight;
+-(void)swipeLeft;
+
 - (id)initWithFrame:(CGRect)frame andRestaurant:(Restaurant*)R;
 
 @property (retain,nonatomic)NSArray* exampleCardLabels; //%%% the labels the cards

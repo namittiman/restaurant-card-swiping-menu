@@ -8,5 +8,19 @@
 
 #import "RestaurantCollectionViewCell.h"
 @implementation RestaurantCollectionViewCell
+@synthesize rating;
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+
+    }
+    return self;
+}
+- (void)awakeFromNib
+{
+    rating.layer.masksToBounds = YES;
+    rating.layer.cornerRadius = 5.0;
+}
 
 @end
