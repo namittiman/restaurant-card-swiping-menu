@@ -32,7 +32,7 @@ static const float CARD_WIDTH = 394; //%%% width of the draggable card
 
 
 
-- (id)initWithFrame:(CGRect)frame andRestaurant:(Restaurant*)R;
+- (id)initWithFrame:(CGRect)frame andRestaurant:(Restaurant*)R withCategory:(int)current_category_index;
 {
     self = [super initWithFrame:frame];
     if (self) {

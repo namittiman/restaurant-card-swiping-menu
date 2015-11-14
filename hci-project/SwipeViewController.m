@@ -40,11 +40,11 @@
                                            NSLog(@"Picker: %@", picker);
                                            NSLog(@"Selected Index: %d", (int)selectedIndex);
                                            NSLog(@"Selected Value: %@", selectedValue);
-                                           self.current_category_index = (int)selectedIndex;
+                                           //self.current_category_index = (int)selectedIndex;
                                            
-                                           DraggableViewBackground *draggableBackground = [[DraggableViewBackground alloc]initWithFrame: self.view.frame andRestaurant:r];
-                                           self.dvb = draggableBackground ;
-                                           [self.view addSubview:draggableBackground];
+                                          // DraggableViewBackground *draggableBackground = [[DraggableViewBackground alloc]initWithFrame: self.view.frame andRestaurant:r withCategory: (int)selectedIndex];
+                                           //self.dvb = draggableBackground ;
+                                          // [self.view addSubview:draggableBackground];
                                            
                                            
                                        }
@@ -85,7 +85,7 @@
 
     
     
-    DraggableViewBackground *draggableBackground = [[DraggableViewBackground alloc]initWithFrame:frame andRestaurant:r];
+    DraggableViewBackground *draggableBackground = [[DraggableViewBackground alloc]initWithFrame:frame andRestaurant:r withCategory:0];
     self.dvb = draggableBackground ;
     
     [self.view addSubview:draggableBackground];
@@ -120,7 +120,6 @@
     {
         ItemDetailsViewController* idvc = [segue destinationViewController];
     
-        NSLog([NSString stringWithFormat:@"CardsLoadedIndex : %ld",(long)self.dvb.currentItemIndex]);
     
         idvc.i = [self.r.menu_items objectAtIndex:(int)self.dvb.currentItemIndex];
     }
@@ -129,7 +128,7 @@
     {
         ShortListViewController* slvc = [segue destinationViewController];
         
-        NSLog([NSString stringWithFormat:@"Count of menuitems : %d",self.dvb.myShortList.menu_items.count]);
+        NSLog([NSString stringWithFormat:@"Count of menuitems : %d",(int)self.dvb.myShortList.menu_items.count]);
         
         slvc.myShortList = self.dvb.myShortList;
     }

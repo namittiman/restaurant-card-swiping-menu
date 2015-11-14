@@ -19,6 +19,7 @@
 		7D64C4561BF7D6BF001D3E70 /* ActionSheetMultipleStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D64C4491BF7D6BF001D3E70 /* ActionSheetMultipleStringPicker.m */; settings = {ASSET_TAGS = (); }; };
 		7D64C4571BF7D6BF001D3E70 /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D64C44C1BF7D6BF001D3E70 /* ActionSheetStringPicker.m */; settings = {ASSET_TAGS = (); }; };
 		7D64C4581BF7D6BF001D3E70 /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D64C44E1BF7D6BF001D3E70 /* DistancePickerView.m */; settings = {ASSET_TAGS = (); }; };
+		7D64C45C1BF7E4AF001D3E70 /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D64C45B1BF7E4AF001D3E70 /* SWActionSheet.m */; settings = {ASSET_TAGS = (); }; };
 		7DD6201B1BF17368000D39DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6201A1BF17368000D39DE /* main.m */; };
 		7DD6201E1BF17368000D39DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6201D1BF17368000D39DE /* AppDelegate.m */; };
 		7DD620241BF17368000D39DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DD620221BF17368000D39DE /* Main.storyboard */; };
@@ -80,6 +81,8 @@
 		7D64C44C1BF7D6BF001D3E70 /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetStringPicker.m; sourceTree = "<group>"; };
 		7D64C44D1BF7D6BF001D3E70 /* DistancePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistancePickerView.h; sourceTree = "<group>"; };
 		7D64C44E1BF7D6BF001D3E70 /* DistancePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistancePickerView.m; sourceTree = "<group>"; };
+		7D64C45A1BF7E4AF001D3E70 /* SWActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWActionSheet.h; sourceTree = "<group>"; };
+		7D64C45B1BF7E4AF001D3E70 /* SWActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWActionSheet.m; sourceTree = "<group>"; };
 		7DD620161BF17368000D39DE /* hci-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hci-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DD6201A1BF17368000D39DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7DD6201C1BF17368000D39DE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 				7D64C4441BF7D6BF001D3E70 /* ActionSheetDistancePicker.h */,
 				7D64C4451BF7D6BF001D3E70 /* ActionSheetDistancePicker.m */,
 				7D64C4461BF7D6BF001D3E70 /* ActionSheetLocalePicker.h */,
+				7D64C45A1BF7E4AF001D3E70 /* SWActionSheet.h */,
+				7D64C45B1BF7E4AF001D3E70 /* SWActionSheet.m */,
 				7D64C4471BF7D6BF001D3E70 /* ActionSheetLocalePicker.m */,
 				7D64C4481BF7D6BF001D3E70 /* ActionSheetMultipleStringPicker.h */,
 				7D64C4491BF7D6BF001D3E70 /* ActionSheetMultipleStringPicker.m */,
@@ -392,6 +397,7 @@
 				7DD620541BF17A52000D39DE /* Restaurant.m in Sources */,
 				7DD6205A1BF17E90000D39DE /* RestaurantCollectionViewCell.m in Sources */,
 				7DD620631BF1BE56000D39DE /* RestaurantsViewController.m in Sources */,
+				7D64C45C1BF7E4AF001D3E70 /* SWActionSheet.m in Sources */,
 				7DD6201E1BF17368000D39DE /* AppDelegate.m in Sources */,
 				7D4CB7641BF5F590004386F0 /* MyShortList.m in Sources */,
 				7DD620741BF257F3000D39DE /* ShortListViewController.m in Sources */,
