@@ -43,6 +43,8 @@
     r.rating = 5.0;
     
     r.menu_items = [[NSMutableArray alloc] init ];
+    r.categories = [[NSMutableArray alloc] initWithObjects:@"All",@"Entrees",@"Appetizers",@"Drinks",@"Desserts", nil ];
+    
     
     i = [[Item alloc]init];
     i.name = @"Masala Dosa";
@@ -95,6 +97,8 @@
     r.rating = 4.3;
 
     r.menu_items = [[NSMutableArray alloc] init ];
+    r.categories = [[NSMutableArray alloc] initWithObjects:@"All",@"Entrees",@"Appetizers",@"Drinks",@"Desserts", nil ];
+
     
     i = [[Item alloc]init];
     i.name = @"r0-1";

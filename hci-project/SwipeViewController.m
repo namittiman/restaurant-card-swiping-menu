@@ -7,6 +7,7 @@
 //
 
 #import "SwipeViewController.h"
+#import "ActionSheetPicker.h"
 
 @interface SwipeViewController ()
 
@@ -16,6 +17,7 @@
 
 @implementation SwipeViewController
 @synthesize r;
+@synthesize current_category_index    ;
 - (IBAction)thumps_up:(id)sender {
     [self.dvb swipeRight];
 }
@@ -23,8 +25,34 @@
     [self.dvb swipeLeft];
 }
 - (IBAction)redo:(id)sender {
+
 }
 
+- (IBAction)filter:(id)sender {
+    
+    
+    //NSArray *colors = [NSArray arrayWithObjects:@"Red", @"Green", @"Blue", @"Orange", nil];
+    
+    [ActionSheetStringPicker showPickerWithTitle:@"Select a Category"
+                                            rows:r.categories
+                                initialSelection:0
+                                       doneBlock:^(ActionSheetStringPicker *picker, NSInteger selectedIndex, id selectedValue) {
+                                           NSLog(@"Picker: %@", picker);
+                                           NSLog(@"Selected Index: %d", (int)selectedIndex);
+                                           NSLog(@"Selected Value: %@", selectedValue);
+                                           self.current_category_index = (int)selectedIndex;
+                                           
+                                           DraggableViewBackground *draggableBackground = [[DraggableViewBackground alloc]initWithFrame: self.view.frame andRestaurant:r];
+                                           self.dvb = draggableBackground ;
+                                           [self.view addSubview:draggableBackground];
+                                           
+                                           
+                                       }
+                                     cancelBlock:^(ActionSheetStringPicker *picker) {
+                                         NSLog(@"Block Picker Canceled");
+                                     }
+                                          origin:sender];
+}
 
 
 - (void)viewDidLoad {
@@ -34,6 +62,7 @@
     [[self navigationItem] setTitle:r.name];
     CGRect frame = self.view.frame;
     //frame.origin.y = -self.view.frame.size.height; //optional: if you want the view to drop down
+    self.current_category_index = 0;
     
     Restaurant * x=r;
     

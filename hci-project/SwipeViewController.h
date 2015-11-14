@@ -16,9 +16,13 @@
 
 @interface SwipeViewController : UIViewController
 @property (nonatomic) Restaurant *r;
+@property (nonatomic) int current_category_index;
+
+
 @property (nonatomic) DraggableViewBackground *dvb;
 @property (weak, nonatomic) IBOutlet UIButton *thumps_up;
 @property (weak, nonatomic) IBOutlet UIButton *thumps_down;
 @property (weak, nonatomic) IBOutlet UIButton *redo;
+
 
 @end

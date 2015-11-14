@@ -376,7 +376,11 @@
                                     <segue destination="2kX-Au-6Eb" kind="show" identifier="sequeToShortList" id="i8H-hg-Hib"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem systemItem="action" id="VQe-vh-a2u"/>
+                            <barButtonItem systemItem="action" id="VQe-vh-a2u">
+                                <connections>
+                                    <action selector="filter:" destination="FeY-lF-SNK" id="3BV-DX-fqB"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>

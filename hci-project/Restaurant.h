@@ -17,5 +17,6 @@
 @property (nonatomic) double rating;
 @property (nonatomic) NSString *notes;
 @property (nonatomic) NSMutableArray *menu_items;//Array of Item
+@property (nonatomic) NSMutableArray *categories;
 
 @end
