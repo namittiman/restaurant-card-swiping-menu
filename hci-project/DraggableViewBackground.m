@@ -32,33 +32,42 @@ static const float CARD_WIDTH = 394; //%%% width of the draggable card
 
 
 
-- (id)initWithFrame:(CGRect)frame andRestaurant:(Restaurant*)R withCategory:(int)current_category_index;
+- (id)initWithFrame:(CGRect)frame andRestaurant:(Restaurant*)R withCategory:(int)current_category_index andShortList:(MyShortList*) myActualShortList;
 {
     self = [super initWithFrame:frame];
     if (self) {
         [super layoutSubviews];
         [self setupView];
         self.r = R;
-        
+        self.myShortList=myActualShortList;
         //setting the exampleCardLabels as per current_category_index
         exampleCardLabels = [[NSMutableArray alloc] init];
-        if (current_category_index == 0) {
-             exampleCardLabels = r.menu_items;
-        }
-        else{
-            for (int i=0; i<r.menu_items.count; i++) {
-                if ([[[r.menu_items objectAtIndex:i] category] isEqualToString:[r.categories objectAtIndex:current_category_index]]) {
-                    [exampleCardLabels addObject:[r.menu_items objectAtIndex:i]];
+        
+        //This is where we decode what to the exampleCardLabels from r.menu_items
+        for (int i=0; i<r.menu_items.count; i++)
+        {
+            
+            //We Filter according to category selected and by what already has been swiped out (considering only what has been swiped right for now)
+            
+            Item *item = (Item*)[r.menu_items objectAtIndex:i];
+            
+            if ([[item category] isEqualToString:[r.categories objectAtIndex:current_category_index]] || current_category_index==0)
+            {
+                
+                //whats already in the shortlist
+                bool isPresent = false;
+                
+                for (int j=0; j<self.myShortList.menu_items.count; j++)
+                {
+                    if ([item.name isEqualToString:[[self.myShortList.menu_items objectAtIndex:j] name]])
+                        isPresent = true;
+                }
+                if (!isPresent) {
+                    [exampleCardLabels addObject:item];
                 }
             }
+            
         }
-       
-        
-        
-        
-        myShortList = [[MyShortList alloc] init];
-
-        myShortList.menu_items = [[NSMutableArray alloc] init];
 
         loadedCards = [[NSMutableArray alloc] init];
         allCards = [[NSMutableArray alloc] init];
@@ -170,6 +179,7 @@ static const float CARD_WIDTH = 394; //%%% width of the draggable card
     i.photo_filename= current_item.photo_filename;
     i.notes =   current_item.notes;
     i.category  =   current_item.category;
+    
     [myShortList.menu_items addObject:i];
     
     currentItemIndex++;

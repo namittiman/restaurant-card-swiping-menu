@@ -45,7 +45,7 @@
 -(void)swipeRight;
 -(void)swipeLeft;
 
-- (id)initWithFrame:(CGRect)frame andRestaurant:(Restaurant*)R withCategory: (int)current_category_index;
+- (id)initWithFrame:(CGRect)frame andRestaurant:(Restaurant*)R withCategory: (int)current_category_index andShortList:(MyShortList*) myActualShortList;
 
 @property (retain,nonatomic)NSMutableArray* exampleCardLabels; //%%% the labels the cards
 @property (retain,nonatomic)NSMutableArray* allCards; //%%% the labels the cards

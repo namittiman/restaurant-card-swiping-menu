@@ -18,6 +18,7 @@
 @implementation SwipeViewController
 @synthesize r;
 @synthesize current_category_index    ;
+@synthesize myShortList;
 - (IBAction)thumps_up:(id)sender {
     [self.dvb swipeRight];
 }
@@ -42,7 +43,7 @@
                                            NSLog(@"Selected Value: %@", selectedValue);
                                            //self.current_category_index = (int)selectedIndex;
                                            
-                                           DraggableViewBackground *draggableBackground = [[DraggableViewBackground alloc]initWithFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height - 150) andRestaurant:r withCategory:(int)selectedIndex];
+                                           DraggableViewBackground *draggableBackground = [[DraggableViewBackground alloc]initWithFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height - 150) andRestaurant:r withCategory:(int)selectedIndex andShortList:self.myShortList];
                                            self.dvb = draggableBackground ;
                                            
                                            [self.view addSubview:draggableBackground];
@@ -65,6 +66,9 @@
     //frame.origin.y = -self.view.frame.size.height; //optional: if you want the view to drop down
     self.current_category_index = 0;
     
+    self.myShortList = [[MyShortList alloc] init];
+    self.myShortList.menu_items = [[NSMutableArray alloc] init];
+    
     Restaurant *x=r;
     
     NSLog(x.name);    NSLog(x.filename); NSLog(x.notes);
@@ -85,7 +89,7 @@
     NSLog( i.name);
 
     
-    DraggableViewBackground *draggableBackground = [[DraggableViewBackground alloc]initWithFrame:CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, frame.size.height - 150) andRestaurant:r withCategory:0];
+    DraggableViewBackground *draggableBackground = [[DraggableViewBackground alloc]initWithFrame:CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, frame.size.height - 150) andRestaurant:r withCategory:0 andShortList:self.myShortList];
     self.dvb = draggableBackground ;
     
     [self.view addSubview:draggableBackground];
