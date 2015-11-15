@@ -24,7 +24,15 @@
     [self.dvb swipeLeft];
 }
 - (IBAction)redo:(id)sender {
+    
+    //This will roll back to start and not just one back
+    NSLog(@"from redo");
+    DraggableViewBackground *draggableBackground = [[DraggableViewBackground alloc]initWithFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height - 150) andRestaurant:r withCategory:(int)self.current_category_index andShortList:self.myShortList];
+    self.dvb = draggableBackground ;
+    
+    [self.view addSubview:draggableBackground];
 
+    
 }
 
 - (IBAction)filter:(id)sender {
@@ -37,7 +45,7 @@
                                            NSLog(@"Picker: %@", picker);
                                            NSLog(@"Selected Index: %d", (int)selectedIndex);
                                            NSLog(@"Selected Value: %@", selectedValue);
-                                           //self.current_category_index = (int)selectedIndex;
+                                           self.current_category_index = (int)selectedIndex;
                                            
                                            DraggableViewBackground *draggableBackground = [[DraggableViewBackground alloc]initWithFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height - 150) andRestaurant:r withCategory:(int)selectedIndex andShortList:self.myShortList];
                                            self.dvb = draggableBackground ;

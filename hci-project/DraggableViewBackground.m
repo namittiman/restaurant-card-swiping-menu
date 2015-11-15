@@ -38,6 +38,7 @@ static const float CARD_WIDTH = 394; //%%% width of the draggable card
     if (self) {
         [super layoutSubviews];
         [self setupView];
+        NSLog(@"test");
         self.r = R;
         self.myShortList=myActualShortList;
         //setting the exampleCardLabels as per current_category_index
