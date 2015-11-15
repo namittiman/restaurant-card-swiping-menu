@@ -33,7 +33,7 @@
     
     //NSArray *colors = [NSArray arrayWithObjects:@"Red", @"Green", @"Blue", @"Orange", nil];
     
-    [ActionSheetStringPicker showPickerWithTitle:@"Select a Category"
+    [ActionSheetStringPicker showPickerWithTitle:@"Select Category"
                                             rows:r.categories
                                 initialSelection:0
                                        doneBlock:^(ActionSheetStringPicker *picker, NSInteger selectedIndex, id selectedValue) {
@@ -42,9 +42,10 @@
                                            NSLog(@"Selected Value: %@", selectedValue);
                                            //self.current_category_index = (int)selectedIndex;
                                            
-                                          // DraggableViewBackground *draggableBackground = [[DraggableViewBackground alloc]initWithFrame: self.view.frame andRestaurant:r withCategory: (int)selectedIndex];
-                                           //self.dvb = draggableBackground ;
-                                          // [self.view addSubview:draggableBackground];
+                                           DraggableViewBackground *draggableBackground = [[DraggableViewBackground alloc]initWithFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height - 150) andRestaurant:r withCategory:(int)selectedIndex];
+                                           self.dvb = draggableBackground ;
+                                           
+                                           [self.view addSubview:draggableBackground];
                                            
                                            
                                        }
@@ -64,7 +65,7 @@
     //frame.origin.y = -self.view.frame.size.height; //optional: if you want the view to drop down
     self.current_category_index = 0;
     
-    Restaurant * x=r;
+    Restaurant *x=r;
     
     NSLog(x.name);    NSLog(x.filename); NSLog(x.notes);
     Item * i =( Item *)[x.menu_items objectAtIndex:0];
@@ -84,8 +85,7 @@
     NSLog( i.name);
 
     
-    
-    DraggableViewBackground *draggableBackground = [[DraggableViewBackground alloc]initWithFrame:frame andRestaurant:r withCategory:0];
+    DraggableViewBackground *draggableBackground = [[DraggableViewBackground alloc]initWithFrame:CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, frame.size.height - 150) andRestaurant:r withCategory:0];
     self.dvb = draggableBackground ;
     
     [self.view addSubview:draggableBackground];
@@ -107,7 +107,7 @@
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
     if([identifier isEqualToString:@"sequeToDetails"])
     {
-        if(self.r.menu_items.count <= (int)self.dvb.currentItemIndex)
+        if(self.dvb.currentItemIndex >= self.dvb.exampleCardLabels.count  )
         return NO;
     }
     return YES;
@@ -118,10 +118,10 @@
     
     if([segue.identifier isEqualToString:@"sequeToDetails"])
     {
-        ItemDetailsViewController* idvc = [segue destinationViewController];
-    
-    
-        idvc.i = [self.r.menu_items objectAtIndex:(int)self.dvb.currentItemIndex];
+       
+            ItemDetailsViewController* idvc = [segue destinationViewController];
+            idvc.i = [self.dvb.exampleCardLabels objectAtIndex:(int)self.dvb.currentItemIndex];
+
     }
     
     if([segue.identifier isEqualToString:@"sequeToShortList"])

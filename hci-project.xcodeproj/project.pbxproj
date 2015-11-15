@@ -195,17 +195,21 @@
 				7DD620621BF1BE56000D39DE /* RestaurantsViewController.m */,
 				7DD6205B1BF1A8CD000D39DE /* SwipeViewController.h */,
 				7DD6205C1BF1A8CD000D39DE /* SwipeViewController.m */,
-				7D64C43C1BF7D6B1001D3E70 /* Pickers */,
 				7DD620661BF1FF3F000D39DE /* DraggableViewBackground.h */,
 				7DD620671BF1FF3F000D39DE /* DraggableViewBackground.m */,
+				7DD620681BF1FF3F000D39DE /* DraggableView.h */,
+				7DD620691BF1FF3F000D39DE /* DraggableView.m */,
+				7DD6206A1BF1FF3F000D39DE /* OverlayView.h */,
+				7DD6206B1BF1FF3F000D39DE /* OverlayView.m */,
 				7DD620721BF257F3000D39DE /* ShortListViewController.h */,
 				7DD620731BF257F3000D39DE /* ShortListViewController.m */,
 				7D4CB75C1BF5CB7B004386F0 /* ItemDetailsViewController.h */,
 				7D4CB75D1BF5CB7B004386F0 /* ItemDetailsViewController.m */,
-				7DD620221BF17368000D39DE /* Main.storyboard */,
-				7DD620191BF17368000D39DE /* Supporting Files */,
 				7D4CB7621BF5F590004386F0 /* MyShortList.h */,
 				7D4CB7631BF5F590004386F0 /* MyShortList.m */,
+				7DD620221BF17368000D39DE /* Main.storyboard */,
+				7D64C43C1BF7D6B1001D3E70 /* Pickers */,
+				7DD620191BF17368000D39DE /* Supporting Files */,
 			);
 			path = "hci-project";
 			sourceTree = "<group>";
@@ -213,14 +217,10 @@
 		7DD620191BF17368000D39DE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				7DD6206A1BF1FF3F000D39DE /* OverlayView.h */,
-				7DD6206B1BF1FF3F000D39DE /* OverlayView.m */,
-				7DD620681BF1FF3F000D39DE /* DraggableView.h */,
-				7DD620691BF1FF3F000D39DE /* DraggableView.m */,
 				7DD620581BF17E90000D39DE /* RestaurantCollectionViewCell.h */,
 				7DD620591BF17E90000D39DE /* RestaurantCollectionViewCell.m */,
-				7DD6202A1BF17368000D39DE /* Info.plist */,
-				7DD620271BF17368000D39DE /* LaunchScreen.storyboard */,
+				7D4CB7651BF60D2B004386F0 /* ProductCell.h */,
+				7D4CB7661BF60D2B004386F0 /* ProductCell.m */,
 				7DD6201C1BF17368000D39DE /* AppDelegate.h */,
 				7DD6201D1BF17368000D39DE /* AppDelegate.m */,
 				7DD620521BF17A52000D39DE /* Restaurant.h */,
@@ -228,8 +228,8 @@
 				7D4CB75F1BF5CCC3004386F0 /* Item.h */,
 				7D4CB7601BF5CCC3004386F0 /* Item.m */,
 				7DD6201A1BF17368000D39DE /* main.m */,
-				7D4CB7651BF60D2B004386F0 /* ProductCell.h */,
-				7D4CB7661BF60D2B004386F0 /* ProductCell.m */,
+				7DD6202A1BF17368000D39DE /* Info.plist */,
+				7DD620271BF17368000D39DE /* LaunchScreen.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

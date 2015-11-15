@@ -39,7 +39,23 @@ static const float CARD_WIDTH = 394; //%%% width of the draggable card
         [super layoutSubviews];
         [self setupView];
         self.r = R;
-        exampleCardLabels = r.menu_items;
+        
+        //setting the exampleCardLabels as per current_category_index
+        exampleCardLabels = [[NSMutableArray alloc] init];
+        if (current_category_index == 0) {
+             exampleCardLabels = r.menu_items;
+        }
+        else{
+            for (int i=0; i<r.menu_items.count; i++) {
+                if ([[[r.menu_items objectAtIndex:i] category] isEqualToString:[r.categories objectAtIndex:current_category_index]]) {
+                    [exampleCardLabels addObject:[r.menu_items objectAtIndex:i]];
+                }
+            }
+        }
+       
+        
+        
+        
         myShortList = [[MyShortList alloc] init];
 
         myShortList.menu_items = [[NSMutableArray alloc] init];
@@ -58,7 +74,7 @@ static const float CARD_WIDTH = 394; //%%% width of the draggable card
 {
     
     self.backgroundColor = [UIColor colorWithRed:.92 green:.93 blue:.95 alpha:1]; //the gray background colors
-    menuButton = [[UIButton alloc]initWithFrame:CGRectMake(17, 34, 22, 15)];
+    /*menuButton = [[UIButton alloc]initWithFrame:CGRectMake(17, 34, 22, 15)];
     [menuButton setImage:[UIImage imageNamed:@"menuButton"] forState:UIControlStateNormal];
     messageButton = [[UIButton alloc]initWithFrame:CGRectMake(284, 34, 18, 18)];
     [messageButton setImage:[UIImage imageNamed:@"messageButton"] forState:UIControlStateNormal];
@@ -71,7 +87,7 @@ static const float CARD_WIDTH = 394; //%%% width of the draggable card
     //[self addSubview:menuButton];
     //[self addSubview:messageButton];
     //[self addSubview:xButton];
-    //[self addSubview:checkButton];
+    //[self addSubview:checkButton];*/
 }
 
 //%%% creates a card and returns it.  This should be customized to fit your needs.
@@ -79,7 +95,7 @@ static const float CARD_WIDTH = 394; //%%% width of the draggable card
 // to get rid of it (eg: if you are building cards from data from the internet)
 -(DraggableView *)createDraggableViewWithDataAtIndex:(NSInteger)index
 {
-    DraggableView *draggableView = [[DraggableView alloc]initWithFrame:CGRectMake(10, 120, CARD_WIDTH, CARD_HEIGHT)];
+    DraggableView *draggableView = [[DraggableView alloc]initWithFrame:CGRectMake(10, 102, CARD_WIDTH, CARD_HEIGHT)];
 
     Item *current_item = (Item*)[exampleCardLabels objectAtIndex:index];
     [draggableView.image setImage:[UIImage imageNamed: current_item.photo_filename ]];
@@ -121,7 +137,6 @@ static const float CARD_WIDTH = 394; //%%% width of the draggable card
     }
 }
 
-#warning include own action here!
 //%%% action called when the card goes to the left.
 // This should be customized with your own action
 -(void)cardSwipedLeft:(UIView *)card;
@@ -154,6 +169,7 @@ static const float CARD_WIDTH = 394; //%%% width of the draggable card
     i.name = current_item.name;
     i.photo_filename= current_item.photo_filename;
     i.notes =   current_item.notes;
+    i.category  =   current_item.category;
     [myShortList.menu_items addObject:i];
     
     currentItemIndex++;

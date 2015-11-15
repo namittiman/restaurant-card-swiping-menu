@@ -52,6 +52,7 @@
     i.notes = @"Description";
     i.spicy = 2;
     i.veg = YES;
+    i.category = @"Entrees";
     [r.menu_items addObject:i];
     
     i = [[Item alloc]init];
@@ -60,6 +61,8 @@
     i.notes = @"Description";
     i.spicy = 0;
     i.veg = YES;
+    i.category = @"Drinks";
+
     [r.menu_items addObject:i];
     
     i = [[Item alloc]init];
@@ -68,6 +71,8 @@
     i.notes = @"Description";
     i.spicy = 1;
     i.veg = YES;
+    i.category = @"Appetizers";
+
     [r.menu_items addObject:i];
     
     i = [[Item alloc]init];
@@ -76,6 +81,8 @@
     i.notes = @"Description";
     i.spicy = 3;
     i.veg = NO;
+    i.category = @"Appetizers";
+
     [r.menu_items addObject:i];
     
     i = [[Item alloc]init];
@@ -84,6 +91,8 @@
     i.notes = @"Description";
     i.spicy = 2;
     i.veg = NO;
+    i.category = @"Appetizers";
+
     [r.menu_items addObject:i];
     
     [restaurants addObject:r];
