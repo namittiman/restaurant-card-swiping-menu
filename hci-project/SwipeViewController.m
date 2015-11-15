@@ -11,8 +11,6 @@
 
 @interface SwipeViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *menu;
-@property (weak, nonatomic) IBOutlet UIImageView *currentImage;
 @end
 
 @implementation SwipeViewController
@@ -31,8 +29,6 @@
 
 - (IBAction)filter:(id)sender {
     
-    
-    //NSArray *colors = [NSArray arrayWithObjects:@"Red", @"Green", @"Blue", @"Orange", nil];
     
     [ActionSheetStringPicker showPickerWithTitle:@"Select Category"
                                             rows:r.categories
@@ -60,10 +56,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.menu setText:r.name];
     [[self navigationItem] setTitle:r.name];
     CGRect frame = self.view.frame;
-    //frame.origin.y = -self.view.frame.size.height; //optional: if you want the view to drop down
+
     self.current_category_index = 0;
     
     self.myShortList = [[MyShortList alloc] init];

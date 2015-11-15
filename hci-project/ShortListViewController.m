@@ -18,7 +18,6 @@
 @synthesize myCollectionView;
 
 - (IBAction)editAction:(id)sender {
-    NSLog(@"test");
     NSLog(self.edit.title);
     
     if([self.edit.title isEqualToString: @"Edit"])
@@ -126,6 +125,15 @@
         
         idvc.i = [myShortList.menu_items objectAtIndex:indexPath.row];
     }
+}
+
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
+    if([identifier isEqualToString:@"sequeFromShortList"])
+    {
+        if(([self.edit.title isEqualToString: @"Done"])  )
+            return NO;
+    }
+    return YES;
 }
 
 

@@ -15,12 +15,15 @@
 }
 @property (weak, nonatomic) IBOutlet UICollectionView *myCollectionView;
 
-@property (strong,nonatomic) NSArray *searchResults;
+
 
 @end
 
 @implementation RestaurantsViewController
 @synthesize myCollectionView;
+@synthesize searchResults;
+@synthesize searchBar;
+@synthesize isFiltered;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,14 +31,16 @@
     
     self.myCollectionView.delegate = self;
     self.myCollectionView.dataSource = self;
+    searchBar.delegate = (id)self;
     
-    self.searchResults = [[NSArray alloc] init];
+    
+    
     
     restaurants = [[NSMutableArray alloc] init];
     Restaurant *r;
     Item * i;
     
-//********************************************
+    //********************************************
     r = [[Restaurant alloc] init];
     r.name = @"Cholanad Restaurant";
     r.filename = @"cholanad";
@@ -62,7 +67,7 @@
     i.spicy = 0;
     i.veg = YES;
     i.category = @"Drinks";
-
+    
     [r.menu_items addObject:i];
     
     i = [[Item alloc]init];
@@ -72,7 +77,7 @@
     i.spicy = 1;
     i.veg = YES;
     i.category = @"Appetizers";
-
+    
     [r.menu_items addObject:i];
     
     i = [[Item alloc]init];
@@ -82,7 +87,7 @@
     i.spicy = 3;
     i.veg = NO;
     i.category = @"Appetizers";
-
+    
     [r.menu_items addObject:i];
     
     i = [[Item alloc]init];
@@ -92,22 +97,22 @@
     i.spicy = 2;
     i.veg = NO;
     i.category = @"Appetizers";
-
+    
     [r.menu_items addObject:i];
     
     [restaurants addObject:r];
     
-//********************************************
+    //********************************************
     
     r = [[Restaurant alloc] init];
     r.name = @"Brio Tuscan Grille";
     r.filename = @"1";
     r.notes = @"Italian, Mediterranean";
     r.rating = 4.3;
-
+    
     r.menu_items = [[NSMutableArray alloc] init ];
     r.categories = [[NSMutableArray alloc] initWithObjects:@"All",@"Entrees",@"Appetizers",@"Drinks",@"Desserts", nil ];
-
+    
     
     i = [[Item alloc]init];
     i.name = @"r0-1";
@@ -138,17 +143,17 @@
     i.photo_filename = @"r0-5";
     i.notes = @"r0-5";
     [r.menu_items addObject:i];
-
+    
     [restaurants addObject:r];
     
-//********************************************
+    //********************************************
     
     r = [[Restaurant alloc] init];
     r.name = @"Pho Vietnam";
     r.filename = @"2";
     r.notes = @"Vietnamese";
     r.rating = 3.3;
-
+    
     r.menu_items = [[NSMutableArray alloc] init ];
     
     i = [[Item alloc]init];
@@ -180,17 +185,17 @@
     i.photo_filename = @"r0-5";
     i.notes = @"r0-5";
     [r.menu_items addObject:i];
-
+    
     [restaurants addObject:r];
-
-//********************************************
+    
+    //********************************************
     
     r = [[Restaurant alloc] init];
     r.name = @"Sushi Iwa";
     r.filename = @"3";
     r.notes = @"Asian, Sushi, Thai";
     r.rating = 2.3;
-
+    
     r.menu_items = [[NSMutableArray alloc] init ];
     
     i = [[Item alloc]init];
@@ -222,18 +227,18 @@
     i.photo_filename = @"r0-5";
     i.notes = @"r0-5";
     [r.menu_items addObject:i];
-
+    
     [restaurants addObject:r];
     
-//********************************************
-
+    //********************************************
+    
     
     r = [[Restaurant alloc] init];
     r.name = @"The Palace International";
     r.filename = @"4";
     r.notes = @"African, Caribbean, Vegetarian";
     r.rating = 1.3;
-
+    
     r.menu_items = [[NSMutableArray alloc] init ];
     
     i = [[Item alloc]init];
@@ -265,11 +270,11 @@
     i.photo_filename = @"r0-5";
     i.notes = @"r0-5";
     [r.menu_items addObject:i];
-
+    
     [restaurants addObject:r];
     
-//********************************************
-
+    //********************************************
+    
     
     r = [[Restaurant alloc] init];
     r.name = @"Sunrise Biscuit Kitchen";
@@ -306,11 +311,11 @@
     i.photo_filename = @"r0-5";
     i.notes = @"r0-5";
     [r.menu_items addObject:i];
-
+    
     [restaurants addObject:r];
     
-//********************************************
-
+    //********************************************
+    
     
     r = [[Restaurant alloc] init];
     r.name = @"One Restaurant";
@@ -347,11 +352,11 @@
     i.photo_filename = @"r0-5";
     i.notes = @"r0-5";
     [r.menu_items addObject:i];
-
+    
     [restaurants addObject:r];
     
-//********************************************
-
+    //********************************************
+    
     
     r = [[Restaurant alloc] init];
     r.name = @"The Cowfish Sushi Burger Bar";
@@ -388,11 +393,11 @@
     i.photo_filename = @"r0-5";
     i.notes = @"r0-5";
     [r.menu_items addObject:i];
-
+    
     [restaurants addObject:r];
     
-//********************************************
-
+    //********************************************
+    
     
     r = [[Restaurant alloc] init];
     r.name = @"Lantern";
@@ -429,11 +434,11 @@
     i.photo_filename = @"r0-5";
     i.notes = @"r0-5";
     [r.menu_items addObject:i];
-
+    
     [restaurants addObject:r];
     
-//********************************************
-
+    //********************************************
+    
     
     r = [[Restaurant alloc] init];
     r.name = @"Dame's Chicken & Waffles";
@@ -470,12 +475,22 @@
     i.photo_filename = @"r0-5";
     i.notes = @"r0-5";
     [r.menu_items addObject:i];
-
+    
     [restaurants addObject:r];
     
-//********************************************
+    //********************************************
     
 }
+
+
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.myCollectionView reloadData];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -490,7 +505,13 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return 20;//set the number of resaurants
+    int rCount;
+    if(self.isFiltered)
+        rCount = searchResults.count;
+    else
+        rCount = restaurants.count;
+    
+    return rCount;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -500,7 +521,17 @@
     cell.layer.masksToBounds = YES;
     cell.layer.cornerRadius = 8;
     
-    Restaurant *current = [restaurants objectAtIndex:indexPath.row%10];//remove the %
+    Restaurant *current;
+    if(isFiltered)
+    {
+        current = [searchResults objectAtIndex:indexPath.row];
+    }
+    else
+    {
+        current = [restaurants objectAtIndex:indexPath.row];
+    }
+    
+    
     
     //Set the cell outlets
     cell.imageView.image = [UIImage imageNamed:current.filename];
@@ -533,14 +564,71 @@
         NSIndexPath *indexPath = [self.myCollectionView indexPathForCell:cell];
         SwipeViewController *svc = (SwipeViewController*)[segue destinationViewController];
         Restaurant *r = [[Restaurant alloc] init];
-        r=restaurants[indexPath.row%10];
+        
+        if(isFiltered)
+        {
+            r = [searchResults objectAtIndex:[indexPath row]];
+        }
+        else
+        {
+            r = [restaurants objectAtIndex:[indexPath row]];
+        }
+
         NSLog(r.name);
         svc.r = r;
     }
+}
+
+#pragma mark - searchBar
+
+-(void)searchBar:(UISearchBar*)searchBar textDidChange:(NSString*)text
+{
+    //NSLog(@"searchBar ... text.length: %d", text.length);
     
-    //NSIndexPath *path = [self.collectionView indexPathForSelectedRow];
-    //Restaurant *r = restaurants[2];
-    //svc.r = r;
+    if(text.length == 0)
+    {
+        self.isFiltered = FALSE;
+        //[searchBar resignFirstResponder];
+        //[self searchBarCancelButtonClicked:searchBar];
+    }
+    else
+    {
+        isFiltered = true;
+        searchResults = [[NSMutableArray alloc] init];
+        
+        for (Restaurant* r in restaurants)
+        {
+            if ([r.name rangeOfString:text options:NSCaseInsensitiveSearch].location != NSNotFound)
+            {
+                [searchResults addObject:r];
+            }
+            
+        }
+    }
+    
+    [self.myCollectionView reloadData];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    //User hit Search button on Keyboard
+    [searchBar resignFirstResponder];
+}
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+{
+    [searchBar setShowsCancelButton:YES animated:YES];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    searchBar.text=@"";
+    
+    [searchBar setShowsCancelButton:NO animated:YES];
+    [searchBar resignFirstResponder];
+    
+    isFiltered = FALSE;
+    [self.myCollectionView reloadData];
 }
 
 

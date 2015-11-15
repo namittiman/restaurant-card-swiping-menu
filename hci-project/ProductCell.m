@@ -24,14 +24,16 @@
     self = [super initWithCoder:coder];
     if (self) {
         //
+        self.deleteButton.showsTouchWhenHighlighted = TRUE;
+        
         UIView *bg = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
         self.backgroundView = bg;
         self.backgroundView.backgroundColor = [UIColor whiteColor];
-        
+        /*
         UIView *sbg = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
         self.selectedBackgroundView = sbg;
         self.selectedBackgroundView.backgroundColor = [UIColor lightGrayColor];
-        
+        */
         
         
     }

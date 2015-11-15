@@ -14,5 +14,7 @@
 
 @interface RestaurantsViewController : UIViewController <UICollectionViewDelegate,UICollectionViewDataSource>
 
-
+@property (strong, nonatomic) NSMutableArray* searchResults;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (nonatomic, assign) bool isFiltered;
 @end
