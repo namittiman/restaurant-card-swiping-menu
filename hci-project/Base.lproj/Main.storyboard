@@ -569,6 +569,16 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="183" height="146"/>
                                                     </variation>
                                                 </imageView>
+                                                <button hidden="YES" opaque="NO" alpha="0.59999999999999998" tag="102" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFh-9n-HZd">
+                                                    <rect key="frame" x="74" y="4" width="21" height="21"/>
+                                                    <animations/>
+                                                    <state key="normal" image="close">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="154" y="8" width="21" height="21"/>
+                                                    </variation>
+                                                </button>
                                             </subviews>
                                             <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -578,16 +588,19 @@
                                             <mask key="subviews">
                                                 <exclude reference="JbC-oW-C1o"/>
                                                 <exclude reference="6hc-gy-qa1"/>
+                                                <exclude reference="EFh-9n-HZd"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact">
                                             <mask key="subviews">
                                                 <include reference="JbC-oW-C1o"/>
                                                 <include reference="6hc-gy-qa1"/>
+                                                <include reference="EFh-9n-HZd"/>
                                             </mask>
                                         </variation>
                                         <connections>
                                             <outlet property="cellTitle" destination="JbC-oW-C1o" id="rW6-ta-9fM"/>
+                                            <outlet property="deleteButton" destination="EFh-9n-HZd" id="60q-ja-aXw"/>
                                             <outlet property="itemImage" destination="6hc-gy-qa1" id="1gF-sU-NvO"/>
                                             <segue destination="qXf-ik-9Wd" kind="show" identifier="sequeFromShortList" id="ebe-oJ-Utv"/>
                                         </connections>
@@ -630,9 +643,14 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="My Short List" id="hGS-or-Na6">
-                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="hp8-gJ-4eR"/>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="hp8-gJ-4eR">
+                            <connections>
+                                <action selector="editAction:" destination="2kX-Au-6Eb" id="bis-D7-tCC"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="edit" destination="hp8-gJ-4eR" id="ScQ-mo-S0C"/>
                         <outlet property="myCollectionView" destination="scn-9E-ebK" id="vRd-pp-X0g"/>
                     </connections>
                 </viewController>
@@ -661,12 +679,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="close" width="512" height="512"/>
         <image name="menuButton" width="46" height="29"/>
         <image name="redo" width="60" height="60"/>
         <image name="thumps_down" width="280" height="280"/>
         <image name="thumps_up" width="280" height="280"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Gbs-MX-Wx5"/>
+        <segue reference="ebe-oJ-Utv"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -18,6 +18,7 @@
 @property (nonatomic) MyShortList *myShortList;
 @property (nonatomic) NSInteger index;
 @property (weak, nonatomic) IBOutlet UICollectionView *myCollectionView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *edit;
 
 
 

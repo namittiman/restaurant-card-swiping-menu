@@ -17,6 +17,30 @@
 @synthesize index;
 @synthesize myCollectionView;
 
+- (IBAction)editAction:(id)sender {
+    NSLog(@"test");
+    NSLog(self.edit.title);
+    
+    if([self.edit.title isEqualToString: @"Edit"])
+    {
+        self.edit.title = @"Done";
+        //Loop through all the cells and set the cell.deleteButton.hidden=false;
+        
+        for(ProductCell* cell in [[self myCollectionView] visibleCells]){
+                        cell.deleteButton.hidden = false;
+        }
+        
+        
+    }
+    else if([self.edit.title isEqualToString: @"Done"])
+    {
+        for(ProductCell* cell in [[self myCollectionView] visibleCells]){
+            cell.deleteButton.hidden = true;
+        }
+        self.edit.title = @"Edit";
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -64,10 +88,28 @@
     cell.itemImage.image = [UIImage imageNamed:[[myShortList.menu_items objectAtIndex:indexPath.row%myShortList.menu_items.count] photo_filename]];
     
     
+  //  [cell.deleteButton addTarget:self action:@selector(self deleteAction:cell)forControlEvents:UIControlEventTouchUpInside];
+    
+    [[cell.deleteButton layer] setValue:[NSNumber numberWithInteger:indexPath.row] forKey:@"index"];
+    [cell.deleteButton addTarget:self action:@selector(deleteAction:) forControlEvents:UIControlEventTouchUpInside];
+
+    
     return cell;
     
 }
 
+-(void)deleteAction:(id)sender
+{
+    NSNumber *anInt = [[sender layer] valueForKey:@"index"];
+   
+    int index =[anInt intValue];
+    
+    [myShortList.menu_items removeObjectAtIndex:index];
+    [self.myCollectionView reloadData];
+
+    NSLog(@"%i", index);
+    
+}
 
 #pragma mark - Navigation
 
