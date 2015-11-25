@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet UITextView *notes;
+@property (weak, nonatomic) IBOutlet UIImageView *spice_image;
 
 @end
 
@@ -24,6 +25,10 @@
     // Do any additional setup after loading the view.
     [self.label setText:i.name];
     [self.image setImage:[UIImage imageNamed: i.photo_filename]];
+    [self.notes setText: i.notes];
+    
+    [self.spice_image setImage:[UIImage imageNamed:[ NSString stringWithFormat:@"spicy%d",i.spicy ]]];
+
     
 
 }

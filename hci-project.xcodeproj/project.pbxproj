@@ -20,6 +20,7 @@
 		7D64C4571BF7D6BF001D3E70 /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D64C44C1BF7D6BF001D3E70 /* ActionSheetStringPicker.m */; settings = {ASSET_TAGS = (); }; };
 		7D64C4581BF7D6BF001D3E70 /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D64C44E1BF7D6BF001D3E70 /* DistancePickerView.m */; settings = {ASSET_TAGS = (); }; };
 		7D64C45C1BF7E4AF001D3E70 /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D64C45B1BF7E4AF001D3E70 /* SWActionSheet.m */; settings = {ASSET_TAGS = (); }; };
+		7D7E9D151C056657006428EF /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7E9D141C056657006428EF /* SettingsViewController.m */; settings = {ASSET_TAGS = (); }; };
 		7DD6201B1BF17368000D39DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6201A1BF17368000D39DE /* main.m */; };
 		7DD6201E1BF17368000D39DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6201D1BF17368000D39DE /* AppDelegate.m */; };
 		7DD620241BF17368000D39DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DD620221BF17368000D39DE /* Main.storyboard */; };
@@ -83,6 +84,8 @@
 		7D64C44E1BF7D6BF001D3E70 /* DistancePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistancePickerView.m; sourceTree = "<group>"; };
 		7D64C45A1BF7E4AF001D3E70 /* SWActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWActionSheet.h; sourceTree = "<group>"; };
 		7D64C45B1BF7E4AF001D3E70 /* SWActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWActionSheet.m; sourceTree = "<group>"; };
+		7D7E9D131C056657006428EF /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		7D7E9D141C056657006428EF /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		7DD620161BF17368000D39DE /* hci-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hci-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DD6201A1BF17368000D39DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7DD6201C1BF17368000D39DE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -195,6 +198,8 @@
 				7DD620621BF1BE56000D39DE /* RestaurantsViewController.m */,
 				7DD6205B1BF1A8CD000D39DE /* SwipeViewController.h */,
 				7DD6205C1BF1A8CD000D39DE /* SwipeViewController.m */,
+				7D7E9D131C056657006428EF /* SettingsViewController.h */,
+				7D7E9D141C056657006428EF /* SettingsViewController.m */,
 				7DD620661BF1FF3F000D39DE /* DraggableViewBackground.h */,
 				7DD620671BF1FF3F000D39DE /* DraggableViewBackground.m */,
 				7DD620681BF1FF3F000D39DE /* DraggableView.h */,
@@ -385,6 +390,7 @@
 				7D64C4541BF7D6BF001D3E70 /* ActionSheetDistancePicker.m in Sources */,
 				7D4CB7611BF5CCC3004386F0 /* Item.m in Sources */,
 				7DD6206E1BF1FF3F000D39DE /* DraggableView.m in Sources */,
+				7D7E9D151C056657006428EF /* SettingsViewController.m in Sources */,
 				7DD6206F1BF1FF3F000D39DE /* OverlayView.m in Sources */,
 				7D64C4561BF7D6BF001D3E70 /* ActionSheetMultipleStringPicker.m in Sources */,
 				7D64C4551BF7D6BF001D3E70 /* ActionSheetLocalePicker.m in Sources */,
@@ -546,10 +552,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "hci-project/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.namit.hci-project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -558,10 +565,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "hci-project/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.namit.hci-project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
