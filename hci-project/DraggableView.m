@@ -68,9 +68,9 @@
 
 -(void)setupView
 {
-    self.layer.cornerRadius = 4;
-    self.layer.shadowRadius = 3;
-    self.layer.shadowOpacity = 0.2;
+    self.layer.cornerRadius = 6;
+    self.layer.shadowRadius = 5;
+    self.layer.shadowOpacity = 0.3;
     self.layer.shadowOffset = CGSizeMake(1, 1);
 }
 

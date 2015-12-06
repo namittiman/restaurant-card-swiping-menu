@@ -19,6 +19,8 @@
 @property (nonatomic) NSInteger index;
 @property (weak, nonatomic) IBOutlet UICollectionView *myCollectionView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *edit;
+@property (weak, nonatomic) IBOutlet UIButton *place_order;
+
 
 
 

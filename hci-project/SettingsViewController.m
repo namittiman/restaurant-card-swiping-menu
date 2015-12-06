@@ -13,12 +13,15 @@
 @property (weak, nonatomic) IBOutlet UITextField *cuisine_pref1;
 @property (weak, nonatomic) IBOutlet UITextField *cuisine_pref3;
 @property (weak, nonatomic) IBOutlet UITextField *cuisine_pref2;
+@property (weak, nonatomic) IBOutlet UITextField *diet_pref;
 
 @end
 
 @implementation SettingsViewController
 @synthesize spice_levels;
 @synthesize cuisines;
+@synthesize diets;
+
 @synthesize selectedIndex;
 
 
@@ -29,6 +32,8 @@
     
     
     self.cuisines =  @[@"American Cuisine",@"Australian Cuisine",@"Brazilian Cuisine",@"Caribbean Cuisine",@"Chinese Cuisine",@"Filipino Cuisine",@"French Cuisine",@"German Cuisine",@"Greek Cuisine",@"Indian Cuisine",@"Indonesian Cuisine",@"Italian Cuisine",@"Japanese Cuisine",@"Korean Cuisine",@"Lebanese Cuisine",@"Mexican Cuisine",@"Scottish Cuisine",@"South African Cuisine",@"Spanish Cuisine",@"Thai Cuisine"];
+    
+        self.diets =  @[@"Vegetarian",@"Non Vegetarian",@"Vegan"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -69,6 +74,17 @@
                                           origin:sender];
 }
 
+
+- (IBAction)set_dietary_pref:(id)sender {
+    [ActionSheetStringPicker showPickerWithTitle:@"Select Dietary Preference"
+                                            rows:self.diets
+                                initialSelection:0
+                                          target:self successAction:@selector(diet_was_selected:element:)
+                                    cancelAction:@selector(actionPickerCancelled:)
+                                          origin:sender];
+
+}
+
 - (void)spice_level_WasSelected:(NSNumber *)selectedIndex element:(id)element {
     self.selectedIndex = [selectedIndex intValue];
     self.spice_preference.text = (self.spice_levels)[(NSUInteger) self.selectedIndex];}
@@ -85,6 +101,10 @@
     self.cuisine_pref3.text = (self.cuisines)[(NSUInteger) self.selectedIndex];
 }
 
+- (void)diet_was_selected:(NSNumber *)selectedIndex element:(id)element {
+    self.selectedIndex = [selectedIndex intValue];
+    self.diet_pref.text = (self.diets)[(NSUInteger) self.selectedIndex];
+}
 
 
 

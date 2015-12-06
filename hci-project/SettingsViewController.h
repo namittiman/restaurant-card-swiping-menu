@@ -12,6 +12,8 @@
 @interface SettingsViewController : UIViewController <UITextFieldDelegate>
 @property (nonatomic, strong) NSArray *spice_levels;
 @property (nonatomic, strong) NSArray *cuisines;
+@property (nonatomic, strong) NSArray *diets;
+
 @property (nonatomic, assign) NSInteger selectedIndex;
 
 @end

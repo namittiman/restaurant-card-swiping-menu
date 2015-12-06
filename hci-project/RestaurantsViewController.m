@@ -40,163 +40,6 @@
     Restaurant *r;
     Item * i;
     
-    //********************************************
-    r = [[Restaurant alloc] init];
-    r.name = @"Cholanad Restaurant";
-    r.filename = @"cholanad";
-    r.notes = @"Indian";
-    r.rating = 4.9;
-    
-    r.menu_items = [[NSMutableArray alloc] init ];
-    r.categories = [[NSMutableArray alloc] initWithObjects:@"All",@"Appetizers",@"Entrees",@"Drinks", nil ];
-    
-    
-    i = [[Item alloc]init];
-    i.name = @"Medhu Vadai";
-    i.photo_filename = @"medhu-vadai";
-    i.notes = @"Fried Lentil donuts";
-    i.spicy = 1;
-    i.veg = YES;
-    i.category = @"Appetizers";
-    [r.menu_items addObject:i];
-    
-    i = [[Item alloc]init];
-    i.name = @"Lamb Kofta";
-    i.photo_filename = @"lamb-kofta";
-    i.notes = @"Meatballs stuffed with lamb meat.";
-    i.spicy = 1;
-    i.veg = NO;
-    i.category = @"Appetizers";
-    [r.menu_items addObject:i];
-    
-    i = [[Item alloc]init];
-    i.name = @"Chicken Puff";
-    i.photo_filename = @"chicken-puff";
-    i.notes = @"A rich, creamy chicken sauce is rolled in croissants and baked to form delicious puffs";
-    i.spicy = 1;
-    i.veg = NO;
-    i.category = @"Appetizers";
-    [r.menu_items addObject:i];
-    
-    i = [[Item alloc]init];
-    i.name = @"Samosa Chat";
-    i.photo_filename = @"samosa-chat";
-    i.notes = @"Samosa on curried chickpeas, added with sev, drizzled with chaat masala and tangy - salty chutneys";
-    i.spicy = 1;
-    i.veg = YES;
-    i.category = @"Appetizers";
-    [r.menu_items addObject:i];
-    
-    i = [[Item alloc]init];
-    i.name = @"Masala Dosa";
-    i.photo_filename = @"masala-dosa";
-    i.notes = @"Crispy thin crepe or pan cake made from rice batter and black lentils and with yummy mashed potatoes";
-    i.spicy = 1;
-    i.veg = YES;
-    i.category = @"Entrees";
-    [r.menu_items addObject:i];
-    
-    i = [[Item alloc]init];
-    i.name = @"Cauliflower Bezule";
-    i.photo_filename = @"cauliflower-bezule";
-    i.notes = @"Cauliflower fried in a chili-spiked batter and then sauteed in a tangy-spicy combination of aromatic ingredients.";
-    i.spicy = 2;
-    i.veg = YES;
-    i.category = @"Entrees";
-    [r.menu_items addObject:i];
-    
-    i = [[Item alloc]init];
-    i.name = @"Egg and greens mini rollups";
-    i.photo_filename = @"Egg&greens-mini-rollups";
-    i.notes = @"Vegetables and eggs rolled in a fried thin bread";
-    i.spicy = 1;
-    i.veg = NO;
-    i.category = @"Entrees";
-    [r.menu_items addObject:i];
-    
-    i = [[Item alloc]init];
-    i.name = @"Haryali kabab";
-    i.photo_filename = @"haryali-kabab";
-    i.notes = @"Boneless chicken pieces are marinated in the mixture of Curd, Spinach and Mint Leaves and grilled in oven.";
-    i.spicy = 2;
-    i.veg = NO;
-    i.category = @"Entrees";
-    [r.menu_items addObject:i];
-    
-    i = [[Item alloc]init];
-    i.name = @"Lamb chops";
-    i.photo_filename = @"lamb-chops";
-    i.notes = @"Lamb Chops Mildly flavored with cheese & herbs,marinated ; roasted in Tandoor";
-    i.spicy = 2;
-    i.veg = NO;
-    i.category = @"Entrees";
-    [r.menu_items addObject:i];
-    
-    i = [[Item alloc]init];
-    i.name = @"Pan Seared Shrimp";
-    i.photo_filename = @"pan-seared-shrimp";
-    i.notes = @"Crispy shrimps fried with green chillies and tangy masala";
-    i.spicy = 2;
-    i.veg = NO;
-    i.category = @"Entrees";
-    [r.menu_items addObject:i];
-    
-    i = [[Item alloc]init];
-    i.name = @"Sarkara Pongal";
-    i.photo_filename = @"Sarkara-pongal";
-    i.notes = @"Sweetened Rice pudding, flavoured with cardamom & cashew nuts ";
-    i.spicy = 0;
-    i.veg = YES;
-    [r.menu_items addObject:i];
-    
-    i = [[Item alloc]init];
-    i.name = @"Soft Shell Crab";
-    i.photo_filename = @"soft-shell-crab";
-    i.notes = @"Crab meat with cinnamon, cloves and lentils made as koftas, tossed in chettinad sauce;";
-    i.spicy = 2;
-    i.veg = NO;
-    i.category = @"Entrees";
-    [r.menu_items addObject:i];
-    
-    i = [[Item alloc]init];
-    i.name = @"Tandoori Chicken";
-    i.photo_filename = @"tandoori-chicken";
-    i.notes = @"Chicken marinated in yogurt and seasoned with the spice mixture tandoori masala";
-    i.spicy = 2;
-    i.veg = NO;
-    i.category = @"Entrees";
-    [r.menu_items addObject:i];
-    
-    i = [[Item alloc]init];
-    i.name = @"Thai infused Fish";
-    i.photo_filename = @"thai-infused-fish";
-    i.notes = @"Whole Fish (Pomfret/ Red Snapper/ Pompano per availability) wrapped in banana leaf, cooked in tamarind, Plated on Pulao Rice";
-    i.spicy = 1;
-    i.veg = NO;
-    i.category = @"Entrees";
-    [r.menu_items addObject:i];
-    
-    i = [[Item alloc]init];
-    i.name = @"South Indian Thali";
-    i.photo_filename = @"thali";
-    i.notes = @"Kadai Vegetable Masala, Spiced baby EggPlant curry, Saag Aloo, Seasonal Veg Poriyal, Yellow Dhal, Sambar, Rasam, Raita, Basmati Rice, Roti & Papad, Gulab Jamun";
-    i.spicy = 1;
-    i.veg = YES;
-    i.category = @"Entrees";
-    [r.menu_items addObject:i];
-    
-    i = [[Item alloc]init];
-    i.name = @"Mango Lassi";
-    i.photo_filename = @"mango-lassi";
-    i.notes = @"Yogurt-based drink with flavor of mango";
-    i.spicy = 0;
-    i.veg = YES;
-    i.category = @"Drinks";
-    [r.menu_items addObject:i];
-        
-    [restaurants addObject:r];
-    
-    //********************************************
     
     
     r = [[Restaurant alloc] init];
@@ -454,7 +297,7 @@
     r.filename = @"ihop";
     r.notes = @"American, Breakfast";
     r.categories = [[NSMutableArray alloc] initWithObjects:@"All",@"Pancakes",@"Omelettes",@"Frenchtoasts",@"Waffles",@"Burgers and Salads",@"Drinks",@"Desserts", nil ];
-    r.rating = 4.5;
+    r.rating = 4.6;
     r.location = @"Hillsborough St, Raleigh";
     r.cuisine = @"American, Breakfast";
 
@@ -616,7 +459,7 @@
     r.name = @"Yuri Japanese Restaurant";
     r.filename = @"yuri_japanese";
     r.cuisine = @"Japanese, Sushi";
-    r.rating = 3.7;
+    r.rating = 4.5;
     r.location = @"Cary";
     
     r.menu_items = [[NSMutableArray alloc] init ];
@@ -654,6 +497,177 @@
     [restaurants addObject:r];
     
     //********************************************
+    
+    //********************************************
+    r = [[Restaurant alloc] init];
+    r.name = @"Cholanad Restaurant";
+    r.filename = @"cholanad";
+    r.cuisine = @"Indian";
+    r.rating = 4.4;
+    r.location = @"Franklin St, Chapel Hill";
+    
+    r.menu_items = [[NSMutableArray alloc] init ];
+    r.categories = [[NSMutableArray alloc] initWithObjects:@"All",@"Appetizers",@"Entrees",@"Drinks", nil ];
+    
+    
+    i = [[Item alloc]init];
+    i.name = @"Sarkara Pongal";
+    i.photo_filename = @"Sarkara-pongal";
+    i.notes = @"Sweetened Rice pudding, flavoured with cardamom & cashew nuts ";
+    i.spicy = 0;
+    i.veg = YES;
+    [r.menu_items addObject:i];
+    
+
+    i = [[Item alloc]init];
+    i.name = @"Medhu Vadai";
+    i.photo_filename = @"medhu-vadai";
+    i.notes = @"Fried Lentil donuts";
+    i.spicy = 1;
+    i.veg = YES;
+    i.category = @"Appetizers";
+    [r.menu_items addObject:i];
+    
+    i = [[Item alloc]init];
+    i.name = @"Egg and greens mini rollups";
+    i.photo_filename = @"Egg&greens-mini-rollups";
+    i.notes = @"Vegetables and eggs rolled in a fried thin bread";
+    i.spicy = 1;
+    i.veg = NO;
+    i.category = @"Entrees";
+    [r.menu_items addObject:i];
+    
+    i = [[Item alloc]init];
+    i.name = @"Masala Dosa";
+    i.photo_filename = @"masala-dosa";
+    i.notes = @"Crispy thin crepe or pan cake made from rice batter and black lentils and with yummy mashed potatoes";
+    i.spicy = 1;
+    i.veg = YES;
+    i.category = @"Entrees";
+    [r.menu_items addObject:i];
+    
+    i = [[Item alloc]init];
+    i.name = @"Samosa Chat";
+    i.photo_filename = @"samosa-chat";
+    i.notes = @"Samosa on curried chickpeas, added with sev, drizzled with chaat masala and tangy - salty chutneys";
+    i.spicy = 1;
+    i.veg = YES;
+    i.category = @"Appetizers";
+    [r.menu_items addObject:i];
+    
+    i = [[Item alloc]init];
+    i.name = @"South Indian Thali";
+    i.photo_filename = @"thali";
+    i.notes = @"Kadai Vegetable Masala, Spiced baby EggPlant curry, Saag Aloo, Seasonal Veg Poriyal, Yellow Dhal, Sambar, Rasam, Raita, Basmati Rice, Roti & Papad, Gulab Jamun";
+    i.spicy = 1;
+    i.veg = YES;
+    i.category = @"Entrees";
+    [r.menu_items addObject:i];
+    
+    i = [[Item alloc]init];
+    i.name = @"Mango Lassi";
+    i.photo_filename = @"mango-lassi";
+    i.notes = @"Yogurt-based drink with flavor of mango";
+    i.spicy = 0;
+    i.veg = YES;
+    i.category = @"Drinks";
+    [r.menu_items addObject:i];
+    
+    i = [[Item alloc]init];
+    i.name = @"Cauliflower Bezule";
+    i.photo_filename = @"cauliflower-bezule";
+    i.notes = @"Cauliflower fried in a chili-spiked batter and then sauteed in a tangy-spicy combination of aromatic ingredients.";
+    i.spicy = 2;
+    i.veg = YES;
+    i.category = @"Entrees";
+    [r.menu_items addObject:i];
+    
+
+    
+    i = [[Item alloc]init];
+    i.name = @"Paneer Puff";
+    i.photo_filename = @"chicken-puff";
+    i.notes = @"A rich, creamy chicken sauce is rolled in croissants and baked to form delicious puffs";
+    i.spicy = 1;
+    i.veg = NO;
+    i.category = @"Appetizers";
+    [r.menu_items addObject:i];
+    
+    i = [[Item alloc]init];
+    i.name = @"Veg Kofta";
+    i.photo_filename = @"soft-shell-crab";
+    i.notes = @"Crab meat with cinnamon, cloves and lentils made as koftas, tossed in chettinad sauce;";
+    i.spicy = 2;
+    i.veg = NO;
+    i.category = @"Entrees";
+    [r.menu_items addObject:i];
+    
+    i = [[Item alloc]init];
+    i.name = @"Haryali kabab";
+    i.photo_filename = @"haryali-kabab";
+    i.notes = @"Boneless chicken pieces are marinated in the mixture of Curd, Spinach and Mint Leaves and grilled in oven.";
+    i.spicy = 2;
+    i.veg = NO;
+    i.category = @"Entrees";
+    [r.menu_items addObject:i];
+    
+    i = [[Item alloc]init];
+    i.name = @"Lamb Kofta";
+    i.photo_filename = @"lamb-kofta";
+    i.notes = @"Meatballs stuffed with lamb meat.";
+    i.spicy = 1;
+    i.veg = NO;
+    i.category = @"Appetizers";
+    [r.menu_items addObject:i];
+
+    
+    i = [[Item alloc]init];
+    i.name = @"Lamb chops";
+    i.photo_filename = @"lamb-chops";
+    i.notes = @"Lamb Chops Mildly flavored with cheese & herbs,marinated ; roasted in Tandoor";
+    i.spicy = 2;
+    i.veg = NO;
+    i.category = @"Entrees";
+    [r.menu_items addObject:i];
+    
+    i = [[Item alloc]init];
+    i.name = @"Pan Seared Shrimp";
+    i.photo_filename = @"pan-seared-shrimp";
+    i.notes = @"Crispy shrimps fried with green chillies and tangy masala";
+    i.spicy = 2;
+    i.veg = NO;
+    i.category = @"Entrees";
+    [r.menu_items addObject:i];
+
+    
+   
+    
+    i = [[Item alloc]init];
+    i.name = @"Tandoori Chicken";
+    i.photo_filename = @"tandoori-chicken";
+    i.notes = @"Chicken marinated in yogurt and seasoned with the spice mixture tandoori masala";
+    i.spicy = 2;
+    i.veg = NO;
+    i.category = @"Entrees";
+    [r.menu_items addObject:i];
+    
+    i = [[Item alloc]init];
+    i.name = @"Thai infused Fish";
+    i.photo_filename = @"thai-infused-fish";
+    i.notes = @"Whole Fish (Pomfret/ Red Snapper/ Pompano per availability) wrapped in banana leaf, cooked in tamarind, Plated on Pulao Rice";
+    i.spicy = 1;
+    i.veg = NO;
+    i.category = @"Entrees";
+    [r.menu_items addObject:i];
+    
+  
+    
+
+    
+    [restaurants addObject:r];
+    
+    //********************************************
+
     
     r = [[Restaurant alloc] init];
     r.name = @"The Cowfish Sushi Burger Bar";

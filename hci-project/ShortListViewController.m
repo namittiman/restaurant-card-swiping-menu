@@ -28,7 +28,8 @@
         for(ProductCell* cell in [[self myCollectionView] visibleCells]){
                         cell.deleteButton.hidden = false;
         }
-        
+        self.place_order.hidden=true;
+
         
     }
     else if([self.edit.title isEqualToString: @"Done"])
@@ -36,7 +37,12 @@
         for(ProductCell* cell in [[self myCollectionView] visibleCells]){
             cell.deleteButton.hidden = true;
         }
+        
+        self.place_order.hidden=false;
+        
+        
         self.edit.title = @"Edit";
+        
     }
 }
 
@@ -45,6 +51,10 @@
     // Do any additional setup after loading the view.
     //NSLog(@"viewdidload");
     //NSLog([NSString stringWithFormat:@"%d!!!!",   index]);
+     self.place_order.layer.cornerRadius = 8;
+     self.place_order.layer.masksToBounds = YES;
+
+    
 
     NSLog([NSString stringWithFormat:@"%lu!!!!",   (unsigned long)myShortList.menu_items.count]);
     for (int i=0; i<myShortList.menu_items.count; i++) {
@@ -95,6 +105,10 @@
     
     return cell;
     
+}
+- (IBAction)place_order_action:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Place Order" message:nil delegate:nil cancelButtonTitle:@"Confirm" otherButtonTitles:@"Cancel", nil];
+    [alert show];
 }
 
 -(void)deleteAction:(id)sender

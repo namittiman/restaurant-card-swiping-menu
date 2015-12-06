@@ -21,6 +21,7 @@
 {
     rating.layer.masksToBounds = YES;
     rating.layer.cornerRadius = 5.0;
+    
 }
 
 @end
